@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: IreneDialogue1
+  m_EditorClassIdentifier: 
+  story: "I know that if I were anyone else, Pazzio would not have commanded you
+    to come rescue me. Just know that I\u2019ll try to pull my own weight and be
+    useful around here. I know how to paint, sing, I\u2019m really good with numbers
+    and I\u2019m good at talking to people, too.\nIf you see any way I could lend
+    a helping hand in the platoon, just say the word and I\u2019ll get to work. I\u2019ll
+    see you around, Chief.\r"
+  opt1: 
+  opt2: 
+  answers: []

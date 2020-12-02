@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: DanteDialogue0
+  m_EditorClassIdentifier: 
+  speaker: Dante
+  story: "Fall is beautiful, isn't it? All these dead leaves, the trees naked; oblivious
+    to the cold that is coming, oblivious to the struggle of the animals all around
+    them. I just find it fascinating for whatever reason...\nAah, but I know you
+    didn\u2019t come looking for me just to hear a homesick scout\u2019s ramblings.
+    Is there anything I can do to help?\r\nOh, yes! Samantha and I were the first
+    ones to help her out of her confinement cell. Lovely girl, isn\u2019t she? We
+    talked a little bit and we told her how our little family is structured and who
+    does what. Has she already talked to you?\r \nI see. So, are we ready to make
+    our way back home?\r"
+  opt1: "Yes.\r"
+  opt2: I want to know your opinion first.
+  answers:
+  - {fileID: 11400000, guid: 3c44a09fdec1945498b4c731ce7199a4, type: 2}
+  - {fileID: 11400000, guid: 94bc43839de8ee448b638893094bcaa0, type: 2}
