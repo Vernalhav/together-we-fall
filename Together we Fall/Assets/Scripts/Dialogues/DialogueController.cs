@@ -103,10 +103,13 @@ public class DialogueController : MonoBehaviour
         }
 
         string fadeOutText = conversation.dialogues[currentDialogueIndex - 1].fadeOutText;
+        AudioClip fadeClip = conversation.dialogues[currentDialogueIndex - 1].fadeOutSound;
         DialogueInfo nextDialogue = conversation.dialogues[currentDialogueIndex++];
 
         TweenCallback onFadeInEnd = () => {
             SetupDialogueSprites(nextDialogue);
+            if (fadeClip != null)
+                typeAudioSource.PlayOneShot(fadeClip);
         };
 
         TweenCallback onFadeOutEnd = () => {

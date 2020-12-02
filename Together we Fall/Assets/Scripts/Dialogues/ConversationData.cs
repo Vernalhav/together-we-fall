@@ -6,10 +6,6 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "NewConversation", menuName = "Dialogues/New Conversation")]
 public class ConversationData : ScriptableObject
 {
-    // public DialogueData[] dialogues;
-    // [Tooltip("Which strings should appear between dialogue transitions. Size should always be dialogues.Length - 1. Leave empty string for no text")]
-    // public string[] fadeOutTexts;
-
     public DialogueInfo[] dialogues;
 }
 
@@ -22,5 +18,7 @@ public struct DialogueInfo
     public bool setShadow;
 
     public DialogueData dialogue;    
+
     public string fadeOutText;
+    public AudioClip fadeOutSound;
 }
