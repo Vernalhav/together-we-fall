@@ -84,6 +84,7 @@ public class DialogueController : MonoBehaviour
         speakerNameUI.text = dialogueInfo.speakerName;
         backgroundImage.sprite = dialogueInfo.backgroundImage;
         speakerSprite.sprite = dialogueInfo.speakerSprite;
+        speakerSprite.SetNativeSize();
         
         dialogueContentUI.text = "";
     }
@@ -117,8 +118,14 @@ public class DialogueController : MonoBehaviour
             setIsFading(false);
         };
         
+        float fadeDuration = fadeOutText == "" ? 0.5f : 1f;
+        float textFadeDuration = fadeOutText == "" ? 0f : 1f;
+        float blackoutDuration = fadeOutText == "" ? 0f : 3f;
+
         setIsFading(true);
-        fader.Fade(onFadeInEnd, onFadeOutEnd, text: fadeOutText);
+        fader.Fade(onFadeInEnd, onFadeOutEnd, text: fadeOutText,
+                    duration: blackoutDuration, textFadeDuration: textFadeDuration,
+                    fadeDuration: fadeDuration);
     }
 
     private void setIsFading(bool value)
