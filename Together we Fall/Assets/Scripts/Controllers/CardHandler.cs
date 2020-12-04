@@ -36,6 +36,11 @@ public class CardHandler : MonoBehaviour
   
     }
 
+    public int GetTroopCount(Card _c)
+    {
+        return cardCounterInGame[_c];
+    }
+
     public bool HasTroops()
     {
         //Debug.Log(cardCounter[selectedCard] != 0);
@@ -53,4 +58,12 @@ public class CardHandler : MonoBehaviour
 
         return count;
     }
+
+    public void RefreshPlayerDeck()
+    {
+        foreach(Card _c in playerDeck.cards){
+            _c.aliveCounter = 10;
+        }
+    }
+
 }
