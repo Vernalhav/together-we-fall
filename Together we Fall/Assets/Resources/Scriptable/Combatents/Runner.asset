@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef890fe21bd32764ebfb012939d90bad, type: 3}
-  m_Name: Tank
+  m_Name: Runner
   m_EditorClassIdentifier: 
-  myType: 1
-  health: 300
-  maxLife: 300
-  attackRadius: 1
-  projectileSpeed: 4
-  fireRate: 3
-  damage: 1
+  myType: 2
+  health: 100
+  maxLife: 100
+  attackRadius: 2
+  projectileSpeed: 2
+  fireRate: 1.5
+  damage: 5
   sr: {fileID: 0}
   enemiesTags: 03000000
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,

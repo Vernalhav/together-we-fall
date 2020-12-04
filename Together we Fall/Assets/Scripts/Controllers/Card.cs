@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Card : ScriptableObject
 {
-    public int initQnt;
+    public int aliveCounter;
     public GameObject soldierPrefab;
 }

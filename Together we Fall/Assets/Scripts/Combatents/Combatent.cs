@@ -6,6 +6,7 @@ using Pathfinding;
 
 public abstract class Combatent: MonoBehaviour
 {
+    public CombatentData data;
     public GameObject bulletPrefab;
     public List<Combatent> enemiesList;
     protected SpriteRenderer sr;
@@ -36,6 +37,8 @@ public abstract class Combatent: MonoBehaviour
 
     protected virtual void Death()
     {
+        Debug.Log(GetComponent<Soldier>() == null);
+        TroopsTracker.OnTroopDied(data.myType);
         Destroy(gameObject);
     }
 
