@@ -37,7 +37,6 @@ public abstract class Combatent: MonoBehaviour
 
     protected virtual void Death()
     {
-        Debug.Log(GetComponent<Soldier>() == null);
         TroopsTracker.OnTroopDied(data.myType);
         Destroy(gameObject);
     }

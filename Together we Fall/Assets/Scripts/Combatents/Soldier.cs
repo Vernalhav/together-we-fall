@@ -27,7 +27,7 @@ public class Soldier : Combatent
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
         //sr.color = new Color(0, 1, 0, 1)
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
-        Debug.Log(GetComponent<AIDestinationSetter>().target);
+        // Debug.Log(GetComponent<AIDestinationSetter>().target);
     }
 
     private void FixedUpdate()

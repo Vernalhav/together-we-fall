@@ -8,6 +8,7 @@ public enum CombatentTypesEnum
     Tank,
     Runner,
     Enemy,
+    Irene,
     Construction
 };
 

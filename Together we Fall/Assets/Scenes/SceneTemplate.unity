@@ -664,18 +664,6 @@ CircleCollider2D:
   m_Offset: {x: -0.0038281062, y: 0}
   serializedVersion: 2
   m_Radius: 0.18035
---- !u!114 &1350322717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350322714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b6e2ddd81e3bc4c8fc3ec149c75e24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1381696233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2050663260024814548, guid: d44e895e5834d7942b59dfa909101757,
@@ -1474,8 +1462,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2147338868}
   - component: {fileID: 2147338869}
+  - component: {fileID: 2147338870}
   m_Layer: 0
-  m_Name: TroopTracker
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1512,6 +1501,18 @@ MonoBehaviour:
   runnerCard: {fileID: 11400000, guid: fc660b6f1e93f1d40bb8a41ab3d007ad, type: 2}
   tankCard: {fileID: 11400000, guid: 77c757a941c84534098cd6ee5b68bd8b, type: 2}
   cardHandler: {fileID: 130078503}
+--- !u!114 &2147338870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147338867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf348155753e5840b0a7a5b8a7f45c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &168264113682388193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2127,6 +2128,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4258792077710373692, guid: f2d0e6ba2e073824db8286a33c2a3398,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4258792077710373693, guid: f2d0e6ba2e073824db8286a33c2a3398,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2196,6 +2202,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104996130473591644, guid: f2d0e6ba2e073824db8286a33c2a3398,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.68343
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104996130473591644, guid: f2d0e6ba2e073824db8286a33c2a3398,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.68343
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104996130473591644, guid: f2d0e6ba2e073824db8286a33c2a3398,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.68343
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104996130473591644, guid: f2d0e6ba2e073824db8286a33c2a3398,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13.200012
       objectReference: {fileID: 0}
     - target: {fileID: 7375811089217062922, guid: f2d0e6ba2e073824db8286a33c2a3398,
         type: 3}

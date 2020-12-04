@@ -38,6 +38,7 @@ public class CardHandler : MonoBehaviour
 
     public int GetTroopCount(Card _c)
     {
+
         return cardCounterInGame[_c];
     }
 

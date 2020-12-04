@@ -5,19 +5,36 @@ using UnityEngine;
 
 public class TroopsTracker : MonoBehaviour
 {
+    public static Action<CombatentTypesEnum> OnTroopDied;
+    public static Action OnTroopFinished;
+    public static Action OnIreneFinished;
+    
     [SerializeField] private int howManyFinished;
-
     [SerializeField] private Card soldierCard;
     [SerializeField] private Card runnerCard;
     [SerializeField] private Card tankCard;
-    public static Action<CombatentTypesEnum> OnTroopDied;
-    public static Action OnTroopFinished;
+
+    private GameManager gameManager;
     public CardHandler cardHandler;
 
     private void Start()
     {
+        SubscribeEvents();
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
+    private void SubscribeEvents()
+    {
         OnTroopDied += TroopDied;
         OnTroopFinished += TroopFinished;
+        OnIreneFinished += IreneFinished;
+    }
+
+    private void OnDestroy()
+    {
+        OnTroopDied -= TroopDied;
+        OnTroopFinished -= TroopFinished;
+        OnIreneFinished -= IreneFinished;
     }
 
     private void TroopFinished()
@@ -26,10 +43,9 @@ public class TroopsTracker : MonoBehaviour
         if (howManyFinished == TotalAlive()) Debug.Log("Passou de fase!!");
     }
 
-    private void OnDestroy()
+    private void IreneFinished()
     {
-        OnTroopDied -= TroopDied;
-        OnTroopFinished -= TroopFinished;
+        gameManager.LevelCompleted();
     }
 
     public void TroopDied(CombatentTypesEnum type){

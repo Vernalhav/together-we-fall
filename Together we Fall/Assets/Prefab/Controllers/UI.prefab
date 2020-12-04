@@ -287,7 +287,7 @@ Canvas:
   m_GameObject: {fileID: 4258792077710373689}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -731,6 +731,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -359641242232758584, guid: a1676abb6be712541bd99bd7109d7902,
         type: 3}
+    - target: {fileID: 4664503872754075207, guid: bd2fae36f170ef642a4621503e307d9e,
+        type: 3}
+      propertyPath: troopCard
+      value: 
+      objectReference: {fileID: 11400000, guid: fc660b6f1e93f1d40bb8a41ab3d007ad,
+        type: 2}
     - target: {fileID: 5952172773716043876, guid: bd2fae36f170ef642a4621503e307d9e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -921,6 +927,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1265705340174883840, guid: 416eaf5a30a415f42911340c893f28ab,
         type: 3}
+    - target: {fileID: 4664503872754075207, guid: bd2fae36f170ef642a4621503e307d9e,
+        type: 3}
+      propertyPath: troopCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 428cf1b7fbba0e84db2ab300ef36d744,
+        type: 2}
     - target: {fileID: 5952172773716043876, guid: bd2fae36f170ef642a4621503e307d9e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1105,6 +1117,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4664503872754075207, guid: bd2fae36f170ef642a4621503e307d9e,
+        type: 3}
+      propertyPath: troopCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 07d2feda2af4dc14287253ce8199e4df,
+        type: 2}
     - target: {fileID: 5952172773716043876, guid: bd2fae36f170ef642a4621503e307d9e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1295,6 +1313,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4326872430171513394, guid: 8083df38e842e634daf1f92a93a4a6bc,
         type: 3}
+    - target: {fileID: 4664503872754075207, guid: bd2fae36f170ef642a4621503e307d9e,
+        type: 3}
+      propertyPath: troopCard
+      value: 
+      objectReference: {fileID: 11400000, guid: 77c757a941c84534098cd6ee5b68bd8b,
+        type: 2}
     - target: {fileID: 5952172773716043876, guid: bd2fae36f170ef642a4621503e307d9e,
         type: 3}
       propertyPath: m_AnchorMin.y

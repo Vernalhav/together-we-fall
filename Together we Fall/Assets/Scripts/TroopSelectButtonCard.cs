@@ -6,5 +6,5 @@ using UnityEngine.UI;
 
 public class TroopSelectButtonCard : MonoBehaviour {
     [SerializeField]
-    public Card troopCard;   
+    public Card troopCard;
 }

@@ -64,7 +64,6 @@ public class CardUIController : MonoBehaviour
                 Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
                 
                 RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, 2100f, entryRegionLayer);
-                Debug.Log(hit);
                 
                 if (hit.collider != null && !(cardHandler.selectedCard == null || !cardHandler.HasTroops())){
                     player.PutSoldier(mousePos);
