@@ -148,7 +148,7 @@ MonoBehaviour:
   repathRate: 0.1
   canSearch: 1
   canMove: 1
-  maxSpeed: 0.5
+  maxSpeed: 1.56
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -232,7 +232,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -257,7 +256,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1972824461282315757, guid: 7f4894f392c088249b44ec084ddcc87d, type: 3}
+  m_Sprite: {fileID: 1972824461282315757, guid: 7f4894f392c088249b44ec084ddcc87d,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -280,17 +280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb9002d6d966a149a12c57361742e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb, type: 3}
-  enemiesList: []
-  sr: {fileID: 0}
-  range: {fileID: 8417646163759383734}
-  health: 0
-  maxHealth: 0
-  attackRadius: 0
-  projectileSpeed: 10
-  fireRate: 10
-  damage: 0
   data: {fileID: 11400000, guid: 6d8b36c0ba661ca47820d919e63b4701, type: 2}
+  bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
+    type: 3}
+  enemiesList: []
   myPath: {fileID: 5440097722930829607}
 --- !u!114 &7967896854962534262
 MonoBehaviour:

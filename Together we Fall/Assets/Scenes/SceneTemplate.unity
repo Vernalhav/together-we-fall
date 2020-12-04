@@ -630,6 +630,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44e895e5834d7942b59dfa909101757, type: 3}
+--- !u!1 &1350322714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 375325079371125952, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 375325079806448750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1350322716
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350322714}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0038281062, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.18035
+--- !u!114 &1350322717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350322714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b6e2ddd81e3bc4c8fc3ec149c75e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1381696233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2050663260024814548, guid: d44e895e5834d7942b59dfa909101757,
@@ -1070,7 +1104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1970299388
 Transform:
   m_ObjectHideFlags: 0
@@ -1461,7 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fcb575af0e13a4e8323ebc5a9854fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalAlive: 0
+  howManyFinished: 0
   soldierCard: {fileID: 11400000, guid: 07d2feda2af4dc14287253ce8199e4df, type: 2}
   runnerCard: {fileID: 11400000, guid: fc660b6f1e93f1d40bb8a41ab3d007ad, type: 2}
   tankCard: {fileID: 11400000, guid: 77c757a941c84534098cd6ee5b68bd8b, type: 2}
@@ -1560,7 +1594,12 @@ PrefabInstance:
     - target: {fileID: 375325079371125953, guid: 6a1f4d655fc104144aaaff027dc7be5b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.25
+      value: 13.343
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325079371125953, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.238
       objectReference: {fileID: 0}
     - target: {fileID: 375325079564110509, guid: 6a1f4d655fc104144aaaff027dc7be5b,
         type: 3}
@@ -2347,10 +2386,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7461259912352516020, guid: e6ece1666df246b4db04d40802fb0152,
+        type: 3}
+      propertyPath: data.dataString
+      value: UEsDBBQAAAgIAACwn+uc6YOUaQIAAAsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzg1jA8Zxby0hpAeSTGgnF1+EtcYaZMkjyQGS4b93JQvs0pOlffvx9u3KX4RL00BhlV5pztaKAfk+Iu5Mvo168AmOdKfkhn/CxeedM1s5J+p93qjlCu2xCzOqBqt58UPuhHOO0NhKXipdL9kOFspYg+aSCgMIaWVdtETT14gc8XOXuZATniapO33iKYtGZzwWIC3o3jUaT7PJbD5L4iyEROMonkdpmmXJNMR2oa0sBK0bYK6PPkN8P56H0LhzlNhj8MFkiauqhOAmcCT21HgNNk0FGpwIjFNs2fOa4LUCvqtsuFxjX8rSgA16aHp64BqV65KSn6qTs6Zm33H7oKJ1ZdL5vWfVJV3/h8ceLbWqny5l48iVsBUv9m/0VFBjB3IPzQ8979grdKBiT7cC3iuQz2qlVSsZgla3LrQ1MHnor9fOFhUU+97eMb0xts1gaJdRhfncYQ9n3/xxIXi99cLPOsNGKK+2XwnQOJpfSNgvjAkp0OpY/DHwm+6GmxWAR66NRSh0KR29rWq1cyVLr5nrprULpSV4cyDdgKTCnl4xjb2d4A02KHuDPFL3hkLxgF2exk2IN/f+UXQDvarDdVimUoc1mOqltYLLYTKHPKNQCyVlt2GDli5hm1aXtBiG7VrO/l0tApBMtzSaJrNJMZ+WyR1L020yo9k9pWWZzhPil49LbJSK145p0AfHJvuyEhft8m8ZrTRt/LYzTQ8r/lmrAUEuS7UpNIB86TJc2wKNRfBdsiXjqNAGrOXSD5x85USoYg8svybKfavLo9U077PkpOEfyjpLThb+Z5KTMzn/BVBLAwQUAAAICAAAsJ/rb9zBT20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0UmqqqXFSooGxqYlRsplxmqluirl5kqlJoqVFYmJamrmZqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAsJ/rnOmDlGkCAAALBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAsJ/rb9zBT20AAAB4AAAACQAkAAAAAAAAAAAAAAC2AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAG4DAAAAAA==
+      objectReference: {fileID: 0}
     - target: {fileID: 7461259912352516021, guid: e6ece1666df246b4db04d40802fb0152,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7461259912352516021, guid: e6ece1666df246b4db04d40802fb0152,
         type: 3}
