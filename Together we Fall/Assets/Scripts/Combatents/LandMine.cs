@@ -9,8 +9,6 @@ public class LandMine : Combatent
     [SerializeField] private float explosionRadius = 0;
     // Start is called before the first frame update
 
-    public CombatentData data;
-
     void Start()
     {
         range = GetComponentInChildren<Range>();

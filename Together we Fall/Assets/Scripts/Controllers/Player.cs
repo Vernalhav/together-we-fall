@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    public CardHandler ch;
+    public CardHandler cardHandler;
     private Vector3 worldPos;
     public GameObject soldiersParent;
     public LayerMask entryRegionLayer;
@@ -25,8 +25,7 @@ public class Player : MonoBehaviour
 
     private void PutSoldier()
     {
-        if (!ch.HasTroops()) return;
-        
+        if (!cardHandler.HasTroops()) return;
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
@@ -38,14 +37,16 @@ public class Player : MonoBehaviour
         {
             worldPos = mousePos;
             worldPos.z = 0;
-            Instantiate(ch.selectedCard.soldierPrefab, worldPos, Quaternion.identity, soldiersParent.transform);            
-            ch.DecreaseCardCount();
+            GameObject newSoldier = Instantiate(cardHandler.selectedCard.soldierPrefab, worldPos, Quaternion.identity, soldiersParent.transform);
+            //Debug.Log(newSoldier.GetComponentInChildren<Soldier>());
+            cardHandler.DecreaseCardCount();
         }
     }
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0) && ch.selectedCard != null)
+
+        if (Input.GetMouseButton(0) && cardHandler.selectedCard != null)
         {
             if (time >= 1/fireRate){
                 time = 0;
