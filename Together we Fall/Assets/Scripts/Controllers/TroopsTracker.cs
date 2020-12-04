@@ -5,25 +5,31 @@ using UnityEngine;
 
 public class TroopsTracker : MonoBehaviour
 {
-    [SerializeField] private int totalAlive;
+    [SerializeField] private int howManyFinished;
+
     [SerializeField] private Card soldierCard;
     [SerializeField] private Card runnerCard;
     [SerializeField] private Card tankCard;
     public static Action<CombatentTypesEnum> OnTroopDied;
+    public static Action OnTroopFinished;
     public CardHandler cardHandler;
     // Start is called before the first frame update
-    private void Awake()
-    {
-        OnTroopDied += TroopDied;   
-    }
 
     private void Start()
     {
-        totalAlive = soldierCard.aliveCounter + tankCard.aliveCounter + runnerCard.aliveCounter;
+        OnTroopDied += TroopDied;
+        OnTroopFinished += TroopFinished;
+    }
+
+    private void TroopFinished()
+    {
+        howManyFinished++;
+        if (howManyFinished == TotalAlive()) Debug.Log("Passou de fase!!");
     }
     private void OnDestroy()
     {
         OnTroopDied -= TroopDied;
+        OnTroopFinished -= TroopFinished;
     }
 
     public void TroopDied(CombatentTypesEnum type){
@@ -54,5 +60,10 @@ public class TroopsTracker : MonoBehaviour
     private bool AllDead()
     {
         return tankCard.aliveCounter == 0 && soldierCard.aliveCounter == 0 && runnerCard.aliveCounter == 0;
+    }
+
+    private int TotalAlive()
+    {
+        return soldierCard.aliveCounter + tankCard.aliveCounter + runnerCard.aliveCounter;
     }
 }
