@@ -14,12 +14,15 @@ public class Destination : MonoBehaviour
             if(collision.tag == c.ToString()){
                 TroopsTracker.OnTroopFinished();
                 collision.gameObject.SetActive(false);
-                return;
-            }if(collision.tag == "Irene"){
-                collision.gameObject.SetActive(false);
-                TroopsTracker.OnIreneFinished();
+                
+                if(collision.tag == "Irene"){
+                    TroopsTracker.OnIreneFinished();
+                }
+                
                 return;
             }
+            
+            
         }
 
     }

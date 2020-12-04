@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef890fe21bd32764ebfb012939d90bad, type: 3}
-  m_Name: Sniper
+  m_Name: LandMine
   m_EditorClassIdentifier: 
-  health: 100
-  maxLife: 100
-  attackRadius: 7
-  projectileSpeed: 1000000
-  fireRate: 0.5
-  damage: 50
+  myType: 3
+  health: 10
+  maxLife: 10
+  attackRadius: 5
+  projectileSpeed: 0
+  fireRate: 0
+  damage: 101
   sr: {fileID: 0}
   enemiesTags: 0000000001000000
   bulletPrefab: {fileID: 0}

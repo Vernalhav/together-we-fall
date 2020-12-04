@@ -7,81 +7,121 @@ public class TroopsTracker : MonoBehaviour
 {
     public static Action<CombatentTypesEnum> OnTroopDied;
     public static Action OnTroopFinished;
+    public static Action OnAliveOnBattlefieldZeroed;
     public static Action OnIreneFinished;
     
-    [SerializeField] private int howManyFinished;
+    [SerializeField] private int troopsFinished;
+    public bool ireneFinished {get; set;}
+    [SerializeField] private int aliveOnBattlefield;
     [SerializeField] private Card soldierCard;
     [SerializeField] private Card runnerCard;
     [SerializeField] private Card tankCard;
+
+    public bool irenePassed {get; set;}
+
+    public bool AllDead {
+        get 
+        {
+            return tankCard.aliveCounter == 0 && soldierCard.aliveCounter == 0 && runnerCard.aliveCounter == 0;
+        }
+    }
+
 
     private GameManager gameManager;
     public CardHandler cardHandler;
 
     private void Start()
     {
+        troopsFinished = 0;
         SubscribeEvents();
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        gameManager = GameManager.Instance;
     }
 
     private void SubscribeEvents()
     {
         OnTroopDied += TroopDied;
+        OnTroopDied += DecrementAliveOnField;
         OnTroopFinished += TroopFinished;
+        OnTroopFinished += DecrementAliveOnField;
+        CardHandler.OnCardDeploy += IncrementAliveOnField;
         OnIreneFinished += IreneFinished;
     }
 
     private void OnDestroy()
     {
         OnTroopDied -= TroopDied;
+        OnTroopDied -= DecrementAliveOnField;
         OnTroopFinished -= TroopFinished;
+        OnTroopFinished -= DecrementAliveOnField;
+        CardHandler.OnCardDeploy -= IncrementAliveOnField;
         OnIreneFinished -= IreneFinished;
     }
 
     private void TroopFinished()
     {
-        howManyFinished++;
-        if (howManyFinished == TotalAlive()) Debug.Log("Passou de fase!!");
+        troopsFinished++;
     }
 
-    private void IreneFinished()
-    {
-        gameManager.LevelCompleted();
+    public void IreneFinished(){
+        TroopFinished();
+        Debug.Log("Irene passed!");
+        ireneFinished = true;
     }
+
+    public void IncrementAliveOnField(){
+        Debug.Log("decrementei");
+        aliveOnBattlefield++;
+    }
+
+    private void DecrementAliveOnField(CombatentTypesEnum c){
+        if(c != CombatentTypesEnum.Enemy){
+            if(aliveOnBattlefield > 0){
+                aliveOnBattlefield--;
+            }else{
+                Debug.LogWarning("Tentou decrementar quando não deveria.");
+            }
+        }
+
+        if(aliveOnBattlefield == 0 && ireneFinished){
+            gameManager.LevelCompleted(EndGameCondition.IreneFinished);
+        }
+    }
+
+    private void DecrementAliveOnField(){
+        if(aliveOnBattlefield > 0){
+            aliveOnBattlefield--;
+        }else{
+            Debug.LogWarning("Tentou decrementar quando não deveria.");
+        }
+    }
+
 
     public void TroopDied(CombatentTypesEnum type){
 
-        Debug.Log(type + "died");
         switch (type)
         {
             case CombatentTypesEnum.Tank:
-                if(tankCard.aliveCounter > 0)
-                    tankCard.aliveCounter--;
+                DecreaseCardCounter(tankCard);
                 break;
 
             case CombatentTypesEnum.Soldier:
-                if (soldierCard.aliveCounter > 0)
-                    soldierCard.aliveCounter--;
+                DecreaseCardCounter(soldierCard);
                 break;
                 
             case CombatentTypesEnum.Runner:
-                if (runnerCard.aliveCounter > 0)
-                    runnerCard.aliveCounter--;
+                DecreaseCardCounter(runnerCard);
+                break;
+            case CombatentTypesEnum.Irene:
+                
                 break;
         }
+    }
 
-        if(AllDead())
-        {
-            Debug.Log("Perdeu o jogo, todos morreram!");
+    public void DecreaseCardCounter(Card c){
+        if(c.aliveCounter > 0){
+            c.aliveCounter--;
+        }else{
+            Debug.LogWarning("Tentou decrementar a carta " + c + " quando não deveria.");
         }
-    }
-
-    private bool AllDead()
-    {
-        return tankCard.aliveCounter == 0 && soldierCard.aliveCounter == 0 && runnerCard.aliveCounter == 0;
-    }
-
-    private int TotalAlive()
-    {
-        return soldierCard.aliveCounter + tankCard.aliveCounter + runnerCard.aliveCounter;
     }
 }

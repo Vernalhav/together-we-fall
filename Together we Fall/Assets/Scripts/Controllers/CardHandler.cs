@@ -1,22 +1,34 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CardHandler : MonoBehaviour
 {
+    
+    public static Action OnCardDeploy;
     public Deck playerDeck;
     public Dictionary<Card, int> cardCounterInGame;
     public Card selectedCard;
 
     private void Start()
     {
+        OnCardDeploy += DecreaseCardCount;
+
         cardCounterInGame = new Dictionary<Card, int>();
         
         foreach(Card c in playerDeck.cards)
         {
             cardCounterInGame.Add(c, c.aliveCounter);
         }
+
     }
+
+    void OnDestroy()
+    {
+        OnCardDeploy -= DecreaseCardCount;
+    }
+
 
     public void SelectCard(Card _c)
     {

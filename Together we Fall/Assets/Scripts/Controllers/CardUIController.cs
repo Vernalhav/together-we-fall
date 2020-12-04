@@ -15,25 +15,14 @@ public class CardUIController : MonoBehaviour
 
     [SerializeField]
     private Sprite selectedSprite;
-    [SerializeField]
-    private Sprite unselectedSprite;
-
-    [SerializeField]
-    private LayerMask entryRegionLayer;
-    [SerializeField]
-    private Player player;
-
-    private float fireRate;
-    private float time;
-
+    [SerializeField] private Sprite unselectedSprite;
 
     private List<TroopSelectionUI> soldierButtonInfos = new List<TroopSelectionUI>();
 
     void Start()
     {
-        fireRate = player.fireRate;
-        time = 1/fireRate;  // Initialize time so that player puts soldier instantly on first click
-
+        CardHandler.OnCardDeploy += UpdateCardCounts;
+        
         foreach(Transform soldierInfo in ButtonPanelTransform) {
             TroopSelectionUI currentSoldierInfo;
             currentSoldierInfo.soldierButton = soldierInfo.GetComponentInChildren<Button>();
@@ -47,32 +36,9 @@ public class CardUIController : MonoBehaviour
         UpdateCardCounts();
     }
 
-    void Update()
+    void OnDestroy()
     {
-        if (Input.GetMouseButtonUp(0))
-            time = 1/fireRate;
-    }
-
-    void FixedUpdate()
-    {
-        if (Input.GetMouseButton(0) && cardHandler.selectedCard != null)
-        {
-            if (time >= 1/fireRate){
-                time = 0;
-
-                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-                
-                RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, 2100f, entryRegionLayer);
-                
-                if (hit.collider != null && !(cardHandler.selectedCard == null || !cardHandler.HasTroops())){
-                    player.PutSoldier(mousePos);
-                    UpdateCardCounts();
-                }
-            }
-
-            time += Time.deltaTime;            
-        }
+        CardHandler.OnCardDeploy -= UpdateCardCounts;
     }
 
     void UpdateCardCounts()
