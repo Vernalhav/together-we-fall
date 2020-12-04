@@ -13,7 +13,6 @@ public class TroopsTracker : MonoBehaviour
     public static Action<CombatentTypesEnum> OnTroopDied;
     public static Action OnTroopFinished;
     public CardHandler cardHandler;
-    // Start is called before the first frame update
 
     private void Start()
     {
@@ -26,6 +25,7 @@ public class TroopsTracker : MonoBehaviour
         howManyFinished++;
         if (howManyFinished == TotalAlive()) Debug.Log("Passou de fase!!");
     }
+
     private void OnDestroy()
     {
         OnTroopDied -= TroopDied;
@@ -41,10 +41,12 @@ public class TroopsTracker : MonoBehaviour
                 if(tankCard.aliveCounter > 0)
                     tankCard.aliveCounter--;
                 break;
+
             case CombatentTypesEnum.Soldier:
                 if (soldierCard.aliveCounter > 0)
                     soldierCard.aliveCounter--;
                 break;
+                
             case CombatentTypesEnum.Runner:
                 if (runnerCard.aliveCounter > 0)
                     runnerCard.aliveCounter--;

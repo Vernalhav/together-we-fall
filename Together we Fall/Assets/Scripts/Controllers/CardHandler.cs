@@ -7,6 +7,7 @@ public class CardHandler : MonoBehaviour
     public Deck playerDeck;
     public Dictionary<Card, int> cardCounterInGame;
     public Card selectedCard;
+
     private void Start()
     {
         cardCounterInGame = new Dictionary<Card, int>();
@@ -51,6 +52,5 @@ public class CardHandler : MonoBehaviour
         }
 
         return count;
-
     }
 }

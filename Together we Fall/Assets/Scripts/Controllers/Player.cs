@@ -25,20 +25,19 @@ public class Player : MonoBehaviour
 
     private void PutSoldier()
     {
-        if (!cardHandler.HasTroops()) return;
-
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         
         RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, 2100f, entryRegionLayer);
-        //Debug.Log(mousePos + " " + (hit.collider == null? "É nulo" : "é o" + hit.collider.gameObject.name));
         
         if (hit.collider != null )
         {
+            if (cardHandler.selectedCard == null || !cardHandler.HasTroops())
+                return;
+
             worldPos = mousePos;
             worldPos.z = 0;
             GameObject newSoldier = Instantiate(cardHandler.selectedCard.soldierPrefab, worldPos, Quaternion.identity, soldiersParent.transform);
-            //Debug.Log(newSoldier.GetComponentInChildren<Soldier>());
             cardHandler.DecreaseCardCount();
         }
     }
