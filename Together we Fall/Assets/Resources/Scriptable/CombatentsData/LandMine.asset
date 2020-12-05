@@ -20,5 +20,5 @@ MonoBehaviour:
   fireRate: 0
   damage: 101
   sr: {fileID: 0}
-  enemiesTags: 0000000001000000
+  enemiesTags: 00000000010000000200000004000000
   bulletPrefab: {fileID: 0}

@@ -7,10 +7,16 @@ public class LandMine : Combatent
 {
     [SerializeField] private LayerMask layerToAttack;
     [SerializeField] private float explosionRadius = 0;
+
+    [SerializeField] private Animator myAnimator;
     // Start is called before the first frame update
+    [SerializeField] SpriteRenderer mySr;
+
 
     void Start()
     {
+        myAnimator = GetComponent<Animator>();
+
         range = GetComponentInChildren<Range>();
         health = data.health;
         maxHealth = data.maxLife;
@@ -36,12 +42,12 @@ public class LandMine : Combatent
 
     private void Explode()
     {
+        mySr.enabled = false;
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerToAttack);
         foreach (var hitCollider in hitColliders)
         {
             hitCollider.gameObject.GetComponent<Combatent>().ReceiveDamage(damage);
         }
-        
-        Destroy(gameObject);
+        myAnimator.SetTrigger("Explode");
     }
 }

@@ -16,10 +16,11 @@ public class TroopsTracker : MonoBehaviour
     [SerializeField] private Card soldierCard;
     [SerializeField] private Card runnerCard;
     [SerializeField] private Card tankCard;
+    [SerializeField] private Card ireneCard;
 
     public bool irenePassed {get; set;}
 
-    public bool AllDead {
+    public bool AllSoldiersDead {
         get 
         {
             return tankCard.aliveCounter == 0 && soldierCard.aliveCounter == 0 && runnerCard.aliveCounter == 0;
@@ -63,7 +64,6 @@ public class TroopsTracker : MonoBehaviour
     }
 
     public void IreneFinished(){
-        TroopFinished();
         Debug.Log("Irene passed!");
         ireneFinished = true;
     }
@@ -73,17 +73,38 @@ public class TroopsTracker : MonoBehaviour
         aliveOnBattlefield++;
     }
 
-    private void DecrementAliveOnField(CombatentTypesEnum c){
-        if(c != CombatentTypesEnum.Enemy){
-            if(aliveOnBattlefield > 0){
+    private void DecrementAliveOnField(CombatentTypesEnum c)
+    {
+        if (c != CombatentTypesEnum.Enemy)
+        {
+            if (aliveOnBattlefield > 0)
+            {
                 aliveOnBattlefield--;
-            }else{
+            }
+            else
+            {
                 Debug.LogWarning("Tentou decrementar quando não deveria.");
             }
         }
 
-        if(aliveOnBattlefield == 0 && ireneFinished){
-            gameManager.LevelCompleted(EndGameCondition.IreneFinished);
+        CheckTroopsCondition();
+    }
+
+    private void CheckTroopsCondition()
+    {
+        if (aliveOnBattlefield == 0)
+        {
+            if(ireneCard.aliveCounter == 0){
+                gameManager.LevelCompleted(EndGameCondition.IreneDied);
+            }
+            else if (ireneFinished)
+            {
+                gameManager.LevelCompleted(EndGameCondition.IreneFinished);
+            }
+            else if (AllSoldiersDead)
+            {
+                gameManager.LevelCompleted(EndGameCondition.AllDead);
+            }
         }
     }
 
@@ -93,6 +114,8 @@ public class TroopsTracker : MonoBehaviour
         }else{
             Debug.LogWarning("Tentou decrementar quando não deveria.");
         }
+
+        CheckTroopsCondition();
     }
 
 
@@ -112,7 +135,7 @@ public class TroopsTracker : MonoBehaviour
                 DecreaseCardCounter(runnerCard);
                 break;
             case CombatentTypesEnum.Irene:
-                
+                DecreaseCardCounter(ireneCard);
                 break;
         }
     }

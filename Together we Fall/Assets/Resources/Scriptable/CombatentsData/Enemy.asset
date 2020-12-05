@@ -20,6 +20,6 @@ MonoBehaviour:
   fireRate: 1
   damage: 20
   sr: {fileID: 0}
-  enemiesTags: 00000000
+  enemiesTags: 00000000010000000200000004000000
   bulletPrefab: {fileID: 4183080524929918656, guid: 409b8418f88b60f43a13585b94e82740,
     type: 3}

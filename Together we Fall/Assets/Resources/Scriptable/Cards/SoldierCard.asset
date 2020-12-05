@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0f6db184d98ec45a47f36fe231b1fa, type: 3}
   m_Name: SoldierCard
   m_EditorClassIdentifier: 
-  aliveCounter: 0
+  aliveCounter: 20
   soldierPrefab: {fileID: 9182485378865670358, guid: 08048fc1e9dbb8a41ac937393401b23c,
     type: 3}

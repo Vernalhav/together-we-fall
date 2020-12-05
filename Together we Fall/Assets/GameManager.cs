@@ -15,8 +15,6 @@ public class GameManager: MonoBehaviour
 
     public static Action OnLevelFinished;
 
-    public TroopsTracker troopTracker;
-
     [SerializeField] private float acceleratedTimeScale = 2f;
 
     public static GameManager Instance
@@ -35,40 +33,38 @@ public class GameManager: MonoBehaviour
     void Start()
     {
         TroopsTracker.OnIreneFinished += AccelerateTime;
-        OnLevelFinished += DesaccelerateTime;
-        TroopsTracker.OnAliveOnBattlefieldZeroed += CheckLevelCompleted;
-        troopTracker = GetComponent<TroopsTracker>();
+        OnLevelFinished += NormalizeTimeScale;
     }
 
     void OnDestroy()
     {
         TroopsTracker.OnIreneFinished -= AccelerateTime;
-        OnLevelFinished -= DesaccelerateTime;
-        TroopsTracker.OnAliveOnBattlefieldZeroed -= CheckLevelCompleted;
+        OnLevelFinished -= NormalizeTimeScale;
     }
 
     public void AccelerateTime(){
         Time.timeScale = acceleratedTimeScale;
     }
 
-    public void DesaccelerateTime(){
-        Time.timeScale = 1;
-    }
-
-
-
-    private void CheckLevelCompleted(){
-        if(troopTracker.irenePassed){
-            LevelCompleted(EndGameCondition.IreneFinished);
-        }else{
-            if(troopTracker.AllDead){
-                LevelCompleted(EndGameCondition.AllDead);
-            }else if()
-        }
+    public void NormalizeTimeScale(){
+        Time.timeScale = 1f;
     }
 
     public void LevelCompleted(EndGameCondition condition ){
+        NormalizeTimeScale();
 
+        switch(condition){
+            case EndGameCondition.AllDead:
+                Debug.Log("Perdeu! Todos Morreram.");
+                break;
+            case EndGameCondition.IreneDied:
+                Debug.Log("Perdeu! Irene Morreu");
+                break;
+            case EndGameCondition.IreneFinished:
+                Debug.Log("Passou de fase! Irene chegou viva ao outro lado.");
+                break;
+
+        }
     }
 
 }
