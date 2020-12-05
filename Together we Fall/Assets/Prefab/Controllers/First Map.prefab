@@ -3885,6 +3885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375325079371125953}
   - component: {fileID: 3765668949216488943}
+  - component: {fileID: 1350322716}
   m_Layer: 0
   m_Name: Destination
   m_TagString: Untagged
@@ -3900,7 +3901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375325079371125952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.53, y: 0.52, z: 0}
+  m_LocalPosition: {x: 13.343, y: 0.238, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 375325079593621928}
@@ -3919,6 +3920,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tags: 04000000010000000000000002000000
+--- !u!58 &1350322716
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375325079371125952}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0038281062, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.18035
 --- !u!1 &375325079414365820
 GameObject:
   m_ObjectHideFlags: 0

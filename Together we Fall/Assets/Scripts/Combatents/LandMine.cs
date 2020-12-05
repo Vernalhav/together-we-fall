@@ -48,6 +48,9 @@ public class LandMine : Combatent
         {
             hitCollider.gameObject.GetComponent<Combatent>().ReceiveDamage(damage);
         }
+        
         myAnimator.SetTrigger("Explode");
+        
+        StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake());
     }
 }
