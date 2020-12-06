@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb9002d6d966a149a12c57361742e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: ecc9883c976cdac40a0805cc64a35bf2, type: 2}
+  data: {fileID: 11400000, guid: 7f4ad964513deb146916433f990a6690, type: 2}
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
     type: 3}
   myPath: {fileID: 5440097722930829607}

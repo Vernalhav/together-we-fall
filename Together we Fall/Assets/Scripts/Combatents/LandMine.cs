@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LandMine : Combatent
+public class LandMine : Enemy
 {
     [SerializeField] private LayerMask layerToAttack;
     [SerializeField] private float explosionRadius = 0;
@@ -13,20 +13,10 @@ public class LandMine : Combatent
     [SerializeField] SpriteRenderer mySr;
 
 
-    void Start()
+    new void Start()
     {
+        base.Start();
         myAnimator = GetComponent<Animator>();
-
-        range = GetComponentInChildren<Range>();
-        health = data.health;
-        maxHealth = data.maxLife;
-        attackRadius = data.attackRadius;
-        projectileSpeed = data.projectileSpeed;
-        fireRate = data.fireRate;
-        damage = data.damage;
-        bulletPrefab = data.bulletPrefab;
-        sr = GetComponent<SpriteRenderer>();
-        range.enemiesTags = data.enemiesTags;
     }
 
     public override void ReceiveDamage(float _dmg)

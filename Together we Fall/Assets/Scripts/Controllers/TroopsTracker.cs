@@ -7,7 +7,6 @@ public class TroopsTracker : MonoBehaviour
 {
     public static Action<CombatentTypesEnum> OnTroopDied;
     public static Action OnTroopFinished;
-    public static Action OnAliveOnBattlefieldZeroed;
     public static Action OnIreneFinished;
     
     [SerializeField] private int troopsFinished;
@@ -26,7 +25,6 @@ public class TroopsTracker : MonoBehaviour
             return tankCard.aliveCounter == 0 && soldierCard.aliveCounter == 0 && runnerCard.aliveCounter == 0;
         }
     }
-
 
     private GameManager gameManager;
     public CardHandler cardHandler;

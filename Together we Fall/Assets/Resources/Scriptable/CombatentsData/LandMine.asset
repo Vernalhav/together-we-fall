@@ -15,7 +15,7 @@ MonoBehaviour:
   myType: 3
   health: 10
   maxLife: 10
-  attackRadius: 5
+  attackRadius: 1
   projectileSpeed: 0
   fireRate: 0
   damage: 101

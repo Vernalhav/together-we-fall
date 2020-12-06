@@ -193,11 +193,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 135cc8649b854134a8a90f4cd6c034a6, type: 2}
   bulletPrefab: {fileID: 0}
-  enemiesList: []
   layerToAttack:
     serializedVersion: 2
     m_Bits: 2048
-  explosionRadius: 1
+  explosionRadius: 3
   myAnimator: {fileID: 0}
   mySr: {fileID: 392813900451192336}
 --- !u!212 &2031876616

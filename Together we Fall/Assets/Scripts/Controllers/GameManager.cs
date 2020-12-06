@@ -50,7 +50,7 @@ public class GameManager: MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void LevelCompleted(EndGameCondition condition ){
+    public void LevelCompleted(EndGameCondition condition){
         NormalizeTimeScale();
 
         switch(condition){

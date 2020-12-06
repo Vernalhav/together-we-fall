@@ -72,6 +72,7 @@ public class CardHandler : MonoBehaviour
         return count;
     }
 
+    [ContextMenu("Refresh player deck")]
     public void RefreshPlayerDeck()
     {
         foreach(Card _c in playerDeck.cards){
