@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
+    public KeyCode escapeKey;
+
     public CardHandler cardHandler;
     private Vector3 worldPos;
     public GameObject soldiersParent;
@@ -20,6 +23,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(escapeKey)){
+            SceneManager.LoadScene(0);
+        }
+
         if (Input.GetMouseButtonUp(0))
             time = 1/fireRate;
     }

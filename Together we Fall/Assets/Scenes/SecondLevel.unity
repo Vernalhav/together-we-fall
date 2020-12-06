@@ -2534,6 +2534,11 @@ PrefabInstance:
       propertyPath: soldiersParent
       value: 
       objectReference: {fileID: 1144366834}
+    - target: {fileID: 2332602502856133722, guid: ddc2774db13e6de4daf7c0e57dd55e11,
+        type: 3}
+      propertyPath: escapeKey
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2332602502856133723, guid: ddc2774db13e6de4daf7c0e57dd55e11,
         type: 3}
       propertyPath: m_Name
