@@ -214,8 +214,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09745207, y: -0.046070185}
-  m_Size: {x: 0.33634618, y: 0.7278083}
+  m_Offset: {x: -0.09745206, y: 0.29566276}
+  m_Size: {x: 0.33634618, y: 0.70639133}
   m_Direction: 0
 --- !u!212 &6439344211626510166
 SpriteRenderer:
@@ -283,7 +283,6 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: ecc9883c976cdac40a0805cc64a35bf2, type: 2}
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
     type: 3}
-  enemiesList: []
   myPath: {fileID: 5440097722930829607}
 --- !u!114 &7967896854962534262
 MonoBehaviour:
