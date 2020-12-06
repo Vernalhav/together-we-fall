@@ -69,7 +69,7 @@ public class TroopsTracker : MonoBehaviour
     }
 
     public void IncrementAliveOnField(){
-        Debug.Log("decrementei");
+        // Debug.Log("decrementei");
         aliveOnBattlefield++;
     }
 
