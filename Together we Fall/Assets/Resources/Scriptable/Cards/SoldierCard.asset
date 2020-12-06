@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0f6db184d98ec45a47f36fe231b1fa, type: 3}
+  m_Name: SoldierCard
+  m_EditorClassIdentifier: 
+  aliveCounter: 50
+  soldierPrefab: {fileID: 9182485378865670358, guid: 08048fc1e9dbb8a41ac937393401b23c,
+    type: 3}

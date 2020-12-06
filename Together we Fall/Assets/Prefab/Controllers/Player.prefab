@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8254dfa0f2301c845a56a3c06611f35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ch: {fileID: 2332602502856133720}
+  cardHandler: {fileID: 2332602502856133720}
   soldiersParent: {fileID: 0}
+  fireRate: 2
   entryRegionLayer:
     serializedVersion: 2
-    m_Bits: 4096
-  fireRate: 2
+    m_Bits: 256
 --- !u!114 &2332602502856133720
 MonoBehaviour:
   m_ObjectHideFlags: 0

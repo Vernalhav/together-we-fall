@@ -3,26 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LandMine : Combatent
+public class LandMine : Enemy
 {
     [SerializeField] private LayerMask layerToAttack;
     [SerializeField] private float explosionRadius = 0;
+
+    [SerializeField] private Animator myAnimator;
     // Start is called before the first frame update
+    [SerializeField] SpriteRenderer mySr;
 
-    public CombatentData data;
 
-    void Start()
+    new void Start()
     {
-        range = GetComponentInChildren<Range>();
-        health = data.health;
-        maxHealth = data.maxLife;
-        attackRadius = data.attackRadius;
-        projectileSpeed = data.projectileSpeed;
-        fireRate = data.fireRate;
-        damage = data.damage;
-        bulletPrefab = data.bulletPrefab;
-        sr = GetComponent<SpriteRenderer>();
-        range.enemiesTags = data.enemiesTags;
+        base.Start();
+        myAnimator = GetComponent<Animator>();
     }
 
     public override void ReceiveDamage(float _dmg)
@@ -38,12 +32,15 @@ public class LandMine : Combatent
 
     private void Explode()
     {
+        mySr.enabled = false;
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerToAttack);
         foreach (var hitCollider in hitColliders)
         {
             hitCollider.gameObject.GetComponent<Combatent>().ReceiveDamage(damage);
         }
         
-        Destroy(gameObject);
+        myAnimator.SetTrigger("Explode");
+        
+        StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake());
     }
 }

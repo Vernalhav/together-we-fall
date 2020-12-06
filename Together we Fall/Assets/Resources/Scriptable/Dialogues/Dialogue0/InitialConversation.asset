@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - speakerName: Irene
-    speakerSprite: {fileID: 5790704314186732439, guid: 5198a620f19b09f4bb0ddd04a63daec3,
+    speakerSprite: {fileID: -1265705340174883840, guid: 5f78797bc14910c4ea71062e25d54533,
       type: 3}
     backgroundImage: {fileID: 21300000, guid: 9f5c1b368b0ce2b40add2cb22430658c, type: 3}
     setShadow: 1

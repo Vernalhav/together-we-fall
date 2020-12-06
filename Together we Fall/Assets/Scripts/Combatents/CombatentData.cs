@@ -8,13 +8,14 @@ public enum CombatentTypesEnum
     Tank,
     Runner,
     Enemy,
+    Irene,
     Construction
 };
 
 [CreateAssetMenu(fileName = "NewCombatentData", menuName = "Combatents/Combatent Data")]
 public class CombatentData : ScriptableObject
 {
-
+    public CombatentTypesEnum myType;
     public float health;
     public float maxLife;
     public float attackRadius;

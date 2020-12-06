@@ -7,15 +7,13 @@ using UnityEngine.PlayerLoop;
 
 public class Soldier : Combatent
 {
-    [SerializeField] private CombatentData data;
     [SerializeField] private AIPath myPath;
   
     private float time = 0;
-
+       
     void Start()
     {
         range = GetComponentInChildren<Range>();
-
         health = data.health;
         maxHealth = data.maxLife;
         attackRadius = data.attackRadius;
@@ -29,12 +27,11 @@ public class Soldier : Combatent
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
         //sr.color = new Color(0, 1, 0, 1)
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
-        Debug.Log(GetComponent<AIDestinationSetter>().target);
+        // Debug.Log(GetComponent<AIDestinationSetter>().target);
     }
 
     private void FixedUpdate()
     {
-
         time += Time.deltaTime;
 
         if (enemiesList.Count > 0 && time >= 1 / fireRate)
@@ -61,7 +58,6 @@ public class Soldier : Combatent
     {
         myPath.enabled = false;
         enemiesList.Add(e);   
-        //Debug.Log("Desabilitei o path");
         
     }   
 

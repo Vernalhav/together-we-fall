@@ -7,9 +7,8 @@ public class Enemy : Combatent
 {
 
     protected float time; //used in time calculation during attack
-    public CombatentData data;
 
-    private void Start()
+    public void Start()
     {
         range = GetComponentInChildren<Range>();
         health = data.health;

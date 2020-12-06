@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8446127682277981952}
   - component: {fileID: 8446127682277981959}
   - component: {fileID: 8446127682277981958}
+  - component: {fileID: 187400163}
+  - component: {fileID: 2157245185219334406}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -59,7 +61,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.98
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -83,3 +85,39 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8446127682277981957}
   m_Enabled: 1
+--- !u!114 &187400163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446127682277981957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510332665e8969d4fa681f741c407c11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 0}
+  shakeDuration: 1
+  shakeAmount: 0.7
+  continousShakeAmount: 0.004
+  decreaseFactor: 1
+--- !u!95 &2157245185219334406
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446127682277981957}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 467c544b1652e5d49ad3c8ad1abb6e19, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 
@@ -16,6 +17,8 @@ using DG.Tweening;
 */
 public class DialogueController : MonoBehaviour
 {
+    public KeyCode escapeKey;
+
     private TextMeshProUGUI dialogueContentUI;
     private TextMeshProUGUI speakerNameUI;
     private TextMeshProUGUI firstButton;
@@ -84,7 +87,7 @@ public class DialogueController : MonoBehaviour
         speakerNameUI.text = dialogueInfo.speakerName;
         backgroundImage.sprite = dialogueInfo.backgroundImage;
         speakerSprite.sprite = dialogueInfo.speakerSprite;
-        speakerSprite.SetNativeSize();
+        // speakerSprite.SetNativeSize();
         
         dialogueContentUI.text = "";
     }
@@ -227,6 +230,10 @@ public class DialogueController : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetKeyDown(escapeKey)){
+            SceneManager.LoadScene(0);
+        }
+
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0)) && !isFading){
 
             if (isTyping){
