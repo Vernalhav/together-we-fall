@@ -16,6 +16,13 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask entryRegionLayer;
     private float time;
 
+    private void Awake() {
+        if (Application.isEditor){
+            Debug.Log("Refreshing player deck because we are in editor mode!");
+            RefreshDeck();
+        }
+    }
+
     void Start()
     {
         time = 1/fireRate;  // Initialize time so that player puts soldier instantly on first click

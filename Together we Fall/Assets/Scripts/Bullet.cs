@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other){
         // TODO: Refactor!
-        if(owner != "Soldier" && (other.gameObject.CompareTag("Soldier") || 
+        if(owner == "Enemy" && (other.gameObject.CompareTag("Soldier") || 
                                     other.gameObject.CompareTag("Tank") || 
                                     other.gameObject.CompareTag("Runner") || 
                                     other.gameObject.CompareTag("Irene")))
@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.CompareTag("Enemy") && owner != "Enemy")
+        if (owner != "Enemy" && other.gameObject.CompareTag("Enemy"))
         {
             other.gameObject.GetComponentInParent<Enemy>().ReceiveDamage(damage);
             Destroy(gameObject);

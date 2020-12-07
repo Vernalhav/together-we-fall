@@ -11,7 +11,9 @@ public class CardUIController : MonoBehaviour
     [SerializeField]
     private CardHandler cardHandler;
     [SerializeField]
-    private RectTransform ButtonPanelTransform;
+    private RectTransform buttonPanelTransform;
+    [SerializeField]
+    private CanvasGroup UICanvasGroup;
 
     [SerializeField]
     private Sprite selectedSprite;
@@ -23,7 +25,7 @@ public class CardUIController : MonoBehaviour
     {
         CardHandler.OnCardDeploy += UpdateCardCounts;
         
-        foreach(Transform soldierInfo in ButtonPanelTransform) {
+        foreach(Transform soldierInfo in buttonPanelTransform) {
             TroopSelectionUI currentSoldierInfo;
             currentSoldierInfo.soldierButton = soldierInfo.GetComponentInChildren<Button>();
             currentSoldierInfo.soldierCount = soldierInfo.GetComponentInChildren<TextMeshProUGUI>();
@@ -63,6 +65,25 @@ public class CardUIController : MonoBehaviour
         }
 
         cardHandler.SelectCard(c);
+    }
+
+    public void BlockUserInput()
+    {
+        cardHandler.SelectCard(null);
+        foreach (TroopSelectionUI t in soldierButtonInfos) {
+            t.soldierButton.interactable = false;
+            t.buttonBackgroundImage.sprite = unselectedSprite;
+        }
+        UICanvasGroup.alpha = 0.5f;
+    }
+
+    public void AllowUserInput()
+    {
+        foreach (TroopSelectionUI t in soldierButtonInfos) {
+            t.soldierButton.interactable = true;
+            t.buttonBackgroundImage.sprite = unselectedSprite;
+        }
+        UICanvasGroup.alpha = 1f;
     }
 }
 

@@ -35,6 +35,5 @@ public class CameraShake : MonoBehaviour
 
         Vector3 antes = transform.position;
         transform.position = originalPos;
-        Debug.Log("Alterei aqui\nAntes: " + antes + "\nDepois: " + transform.position);
     }
 }

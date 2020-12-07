@@ -67,7 +67,6 @@ public class TroopsTracker : MonoBehaviour
     }
 
     public void IncrementAliveOnField(){
-        // Debug.Log("decrementei");
         aliveOnBattlefield++;
     }
 
@@ -90,12 +89,13 @@ public class TroopsTracker : MonoBehaviour
 
     private void CheckTroopsCondition()
     {
+        if(ireneCard.aliveCounter == 0){
+            gameManager.LevelCompleted(EndGameCondition.IreneDied);
+        }
+
         if (aliveOnBattlefield == 0)
         {
-            if(ireneCard.aliveCounter == 0){
-                gameManager.LevelCompleted(EndGameCondition.IreneDied);
-            }
-            else if (ireneFinished)
+            if (ireneFinished)
             {
                 gameManager.LevelCompleted(EndGameCondition.IreneFinished);
             }
@@ -118,7 +118,6 @@ public class TroopsTracker : MonoBehaviour
 
 
     public void TroopDied(CombatentTypesEnum type){
-
         switch (type)
         {
             case CombatentTypesEnum.Tank:

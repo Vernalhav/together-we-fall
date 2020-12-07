@@ -9,7 +9,6 @@ public abstract class Combatent: MonoBehaviour
     public CombatentData data;
     public GameObject bulletPrefab;
     protected List<Combatent> enemiesList= new List<Combatent>();
-    protected SpriteRenderer sr;
     protected Range range;
      
     protected float health;

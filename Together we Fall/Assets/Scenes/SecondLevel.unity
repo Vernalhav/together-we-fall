@@ -127,6 +127,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3160554360665681205}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &82271972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4258792077710373689, guid: f2d0e6ba2e073824db8286a33c2a3398,
+    type: 3}
+  m_PrefabInstance: {fileID: 4258792077676756400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &82271973
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82271972}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &107796057
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +355,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1508156431}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &722506412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 300846881, guid: f2d0e6ba2e073824db8286a33c2a3398,
+    type: 3}
+  m_PrefabInstance: {fileID: 4258792077676756400}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b60ff1046ac61847aa87317cc4050f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &729893047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1621,6 +1651,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d44e895e5834d7942b59dfa909101757, type: 3}
+--- !u!224 &1728482929 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7104996130473591644, guid: f2d0e6ba2e073824db8286a33c2a3398,
+    type: 3}
+  m_PrefabInstance: {fileID: 4258792077676756400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1819257249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2050663260024814548, guid: d44e895e5834d7942b59dfa909101757,
@@ -2229,6 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf348155753e5840b0a7a5b8a7f45c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardUIController: {fileID: 722506412}
   acceleratedTimeScale: 2
 --- !u!1001 &168264113682388193
 PrefabInstance:
@@ -2306,6 +2343,52 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 375325078261276161, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325078261276163, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325078261276191, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[197].second.m_TileIndex
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325078261276191, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[197].second.m_TileSpriteIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325078261276191, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_TileAssetArray.Array.data[12].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325078261276191, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_TileAssetArray.Array.data[12].m_Data
+      value: 
+      objectReference: {fileID: 11400000, guid: 871d603f1c3e22248b3bd1e79e938e93,
+        type: 2}
+    - target: {fileID: 375325078261276191, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_TileAssetArray.Array.data[25].m_RefCount
+      value: 410
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325078261276191, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325078261276191, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[25].m_RefCount
+      value: 410
+      objectReference: {fileID: 0}
     - target: {fileID: 375325079593621928, guid: 6a1f4d655fc104144aaaff027dc7be5b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2365,6 +2448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: First Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 375325079593621930, guid: 6a1f4d655fc104144aaaff027dc7be5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a1f4d655fc104144aaaff027dc7be5b, type: 3}
@@ -2643,6 +2731,14 @@ PrefabInstance:
       propertyPath: cardHandler
       value: 
       objectReference: {fileID: 130078503}
+    - target: {fileID: 300846881, guid: f2d0e6ba2e073824db8286a33c2a3398, type: 3}
+      propertyPath: UICanvasGroup
+      value: 
+      objectReference: {fileID: 82271973}
+    - target: {fileID: 300846881, guid: f2d0e6ba2e073824db8286a33c2a3398, type: 3}
+      propertyPath: buttonPanelTransform
+      value: 
+      objectReference: {fileID: 1728482929}
     - target: {fileID: 1113852822979591696, guid: f2d0e6ba2e073824db8286a33c2a3398,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2682,6 +2778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727885875950091006, guid: f2d0e6ba2e073824db8286a33c2a3398,
+        type: 3}
+      propertyPath: m_Name
+      value: ButtonPanel
       objectReference: {fileID: 0}
     - target: {fileID: 2141672377269450619, guid: f2d0e6ba2e073824db8286a33c2a3398,
         type: 3}

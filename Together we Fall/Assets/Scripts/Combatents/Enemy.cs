@@ -11,15 +11,14 @@ public class Enemy : Combatent
     public void Start()
     {
         range = GetComponentInChildren<Range>();
-        health = data.health;
+        health = data.maxLife;
         maxHealth = data.maxLife;
         attackRadius = data.attackRadius;
         projectileSpeed = data.projectileSpeed;
         fireRate = data.fireRate;
         damage = data.damage;
         bulletPrefab = data.bulletPrefab;
-        sr = GetComponent<SpriteRenderer>();
-
+ 
         range.enemiesTags = data.enemiesTags;
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
 
