@@ -10,7 +10,6 @@ public class Sniper : Enemy
 
     public override void Attack(Transform targetPosition)
     {
-        Debug.Log("POOWWW!");
         targetPosition.GetComponent<Soldier>().ReceiveDamage(damage);
 
         shot.SetPosition(0, firePoint.position);
