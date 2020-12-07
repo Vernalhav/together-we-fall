@@ -21,7 +21,6 @@ public class Soldier : Combatent
         fireRate = data.fireRate;
         damage = data.damage;
         bulletPrefab = data.bulletPrefab;
-        sr = GetComponent<SpriteRenderer>();
 
         range.enemiesTags = data.enemiesTags;
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
