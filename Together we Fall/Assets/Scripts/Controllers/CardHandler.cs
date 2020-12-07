@@ -29,7 +29,6 @@ public class CardHandler : MonoBehaviour
         OnCardDeploy -= DecreaseCardCount;
     }
 
-
     public void SelectCard(Card _c)
     {
         selectedCard = _c;
@@ -40,17 +39,10 @@ public class CardHandler : MonoBehaviour
         if (cardCounterInGame[selectedCard] <= 0) return;
 
         cardCounterInGame[selectedCard]--;
-        
-        if(cardCounterInGame[selectedCard] == 0)
-        {
-            Debug.Log("acabaram as tropas");
-        }
-  
     }
 
     public int GetTroopCount(Card _c)
     {
-
         return cardCounterInGame[_c];
     }
 
@@ -76,7 +68,9 @@ public class CardHandler : MonoBehaviour
     public void RefreshPlayerDeck()
     {
         foreach(Card _c in playerDeck.cards){
-            _c.aliveCounter = 10;
+            _c.aliveCounter = 100;
+            if (_c.cardType == CombatentTypesEnum.Irene)
+                _c.aliveCounter = 1;
         }
     }
 

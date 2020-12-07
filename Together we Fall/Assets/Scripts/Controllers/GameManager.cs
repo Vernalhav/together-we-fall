@@ -12,6 +12,7 @@ public enum EndGameCondition{
 public class GameManager: MonoBehaviour
 {
     private static GameManager _instance;
+    [SerializeField] private CardUIController cardUIController;
 
     public static Action OnLevelFinished;
 
@@ -32,22 +33,24 @@ public class GameManager: MonoBehaviour
 
     void Start()
     {
-        TroopsTracker.OnIreneFinished += AccelerateTime;
+        TroopsTracker.OnIreneFinished += SpeedUpGame;
         OnLevelFinished += NormalizeTimeScale;
     }
 
     void OnDestroy()
     {
-        TroopsTracker.OnIreneFinished -= AccelerateTime;
+        TroopsTracker.OnIreneFinished -= SpeedUpGame;
         OnLevelFinished -= NormalizeTimeScale;
     }
 
-    public void AccelerateTime(){
+    public void SpeedUpGame(){
         Time.timeScale = acceleratedTimeScale;
+        cardUIController.BlockUserInput();
     }
 
     public void NormalizeTimeScale(){
         Time.timeScale = 1f;
+        cardUIController.AllowUserInput();
     }
 
     public void LevelCompleted(EndGameCondition condition){
@@ -63,7 +66,6 @@ public class GameManager: MonoBehaviour
             case EndGameCondition.IreneFinished:
                 Debug.Log("Passou de fase! Irene chegou viva ao outro lado.");
                 break;
-
         }
     }
 

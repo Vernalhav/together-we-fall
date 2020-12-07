@@ -25,9 +25,7 @@ public class Soldier : Combatent
 
         range.enemiesTags = data.enemiesTags;
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
-        //sr.color = new Color(0, 1, 0, 1)
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
-        // Debug.Log(GetComponent<AIDestinationSetter>().target);
     }
 
     private void FixedUpdate()
@@ -47,34 +45,9 @@ public class Soldier : Combatent
             //Debug.Log("Habilitei o path! " + enemiesList.Count);
         }
     }
-
-    public override void ReceiveDamage(float _dmg)
-    {
-        base.ReceiveDamage(_dmg);
-       //UpdateHealthColor();
-    }
-
     public override void FoundEnemy(Combatent e)
     {
         myPath.enabled = false;
-        enemiesList.Add(e);   
-        
-    }   
-
-    private void UpdateHealthColor()
-    {
-        float _healthPercentage = health / maxHealth;
-        if( 0.6f < _healthPercentage && _healthPercentage <= 1)
-        {
-            sr.color = new Color(0, 1, 0, 1);
-        } else if (0.3 < _healthPercentage && _healthPercentage <= 0.6)
-        {
-            sr.color = new Color(1, 1, 1);
-        }
-        else
-        {
-            sr.color = new Color(1, 0, 1);
-        }
-
-    }    
+        enemiesList.Add(e);
+    }
 }

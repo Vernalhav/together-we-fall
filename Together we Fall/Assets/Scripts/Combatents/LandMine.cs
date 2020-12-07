@@ -36,7 +36,7 @@ public class LandMine : Enemy
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerToAttack);
         foreach (var hitCollider in hitColliders)
         {
-            hitCollider.gameObject.GetComponent<Combatent>().ReceiveDamage(damage);
+            hitCollider.GetComponent<Combatent>().ReceiveDamage(damage);
         }
         
         myAnimator.SetTrigger("Explode");
