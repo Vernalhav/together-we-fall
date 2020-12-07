@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum EndGameCondition{
     IreneFinished,
@@ -13,6 +14,7 @@ public class GameManager: MonoBehaviour
 {
     private static GameManager _instance;
     [SerializeField] private CardUIController cardUIController;
+    [SerializeField] private DefeatUIController defeatUIController;
 
     public static Action OnLevelFinished;
 
@@ -31,8 +33,12 @@ public class GameManager: MonoBehaviour
         }
     }
 
+    private bool _hasLost = false;
+    public bool hasLost {get {return _hasLost;} }
+
     void Start()
     {
+        _hasLost = false;
         TroopsTracker.OnIreneFinished += SpeedUpGame;
         OnLevelFinished += NormalizeTimeScale;
     }
@@ -58,15 +64,29 @@ public class GameManager: MonoBehaviour
 
         switch(condition){
             case EndGameCondition.AllDead:
-                Debug.Log("Perdeu! Todos Morreram.");
+                _hasLost = true;
+                defeatUIController.ShowDefeatScreen("Mission failed: all troops died");
                 break;
+
             case EndGameCondition.IreneDied:
-                Debug.Log("Perdeu! Irene Morreu");
+                _hasLost = true;
+                defeatUIController.ShowDefeatScreen("Mission failed: Irene died");
                 break;
+
             case EndGameCondition.IreneFinished:
                 Debug.Log("Passou de fase! Irene chegou viva ao outro lado.");
                 break;
         }
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }

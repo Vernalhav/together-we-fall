@@ -89,7 +89,7 @@ public class TroopsTracker : MonoBehaviour
 
     private void CheckTroopsCondition()
     {
-        if(ireneCard.aliveCounter == 0){
+        if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
             gameManager.LevelCompleted(EndGameCondition.IreneDied);
         }
 

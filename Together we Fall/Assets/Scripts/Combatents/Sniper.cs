@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class Sniper : Enemy
 {
+    [SerializeField] private float shotAnimationDuration;
     [SerializeField] LineRenderer shot;
     [SerializeField] Transform firePoint;
 
@@ -14,7 +15,11 @@ public class Sniper : Enemy
 
         shot.SetPosition(0, firePoint.position);
         shot.SetPosition(1, targetPosition.position);
-        shot.widthMultiplier = 0.1f;
-        DOTween.To( () => shot.widthMultiplier,  (float x) => shot.widthMultiplier = x, 0f, 1f).SetEase(Ease.OutQuad);
+        shot.widthMultiplier = 0.05f;
+        
+        if (shot != null){
+            DOTween.To( () => shot.widthMultiplier,  (float x) => shot.widthMultiplier = x, 0f, shotAnimationDuration)
+                    .SetEase(Ease.OutQuad);
+        }
     }
 }
