@@ -11,7 +11,7 @@ public class Enemy : Combatent
     public void Start()
     {
         range = GetComponentInChildren<Range>();
-        health = data.health;
+        health = data.maxLife;
         maxHealth = data.maxLife;
         attackRadius = data.attackRadius;
         projectileSpeed = data.projectileSpeed;
