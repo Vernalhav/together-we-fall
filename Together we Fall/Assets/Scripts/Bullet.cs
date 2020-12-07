@@ -18,7 +18,6 @@ public class Bullet : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other){
         // TODO: Refactor!
-        Debug.Log(owner + " " + other.gameObject.tag);
         if(owner == "Enemy" && (other.gameObject.CompareTag("Soldier") || 
                                     other.gameObject.CompareTag("Tank") || 
                                     other.gameObject.CompareTag("Runner") || 
