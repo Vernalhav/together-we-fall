@@ -5,11 +5,12 @@ using UnityEngine;
 public class MainInitializer : MonoBehaviour
 {
     [SerializeField] private MainGameContent mainGameContent;
-    void Start()
+    void Awake()
     {
+        SceneTracker.sceneArgs = new Queue<SceneArgs>();
+
         foreach(SceneArgs sceneArgs in mainGameContent.mainGameContent){
             SceneTracker.sceneArgs.Enqueue(sceneArgs);
         }
-        Debug.Log("Initialized SceneTracker!");
     }
 }

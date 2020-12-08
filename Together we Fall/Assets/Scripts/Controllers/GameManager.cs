@@ -34,7 +34,19 @@ public class GameManager: MonoBehaviour
     }
 
     private bool _hasLost = false;
-    public bool hasLost {get {return _hasLost;} }
+    public bool hasLost { get {return _hasLost;} }
+    [SerializeField] GameObject defaultLevelPrefab;
+
+    private void Awake()
+    {
+        if (SceneTracker.sceneArgs.Count > 0 && SceneTracker.sceneArgs.Peek() is CombatArgs){
+            CombatArgs currentLevel = SceneTracker.sceneArgs.Peek() as CombatArgs;
+            Instantiate(currentLevel.mapPrefab);
+        }
+        else {
+            Instantiate(defaultLevelPrefab);
+        }
+    }
 
     void Start()
     {
@@ -75,6 +87,14 @@ public class GameManager: MonoBehaviour
 
             case EndGameCondition.IreneFinished:
                 Debug.Log("Passou de fase! Irene chegou viva ao outro lado.");
+                SceneTracker.sceneArgs.Dequeue();
+                
+                if (SceneTracker.sceneArgs.Count == 0) {
+                    Debug.Log("Acabou o jogo!");
+                    SceneManager.LoadScene(0);
+                } else {
+                    SceneManager.LoadScene(1);
+                }
                 break;
         }
     }

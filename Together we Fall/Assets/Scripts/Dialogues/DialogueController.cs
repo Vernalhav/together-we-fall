@@ -33,7 +33,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField]
     private Image speakerSprite;
 
-    public ConversationData conversation;
+    private ConversationData conversation;
     private DialogueData currentDialogue;
 
     private int currentDialogueIndex;   // 1-based
@@ -62,9 +62,22 @@ public class DialogueController : MonoBehaviour
     private bool isTyping = false;
     private IEnumerator writingCoroutine;  // Reference to the typing coroutine (function)
 
+    [SerializeField]
+    private ConversationData defaultConversation;
+
+    private int combatSceneIndex = 2;
+
 
     void Awake()
     {
+        if (SceneTracker.sceneArgs.Count > 0 && SceneTracker.sceneArgs.Peek() is DialogueArgs){
+            DialogueArgs currentConversationArgs = SceneTracker.sceneArgs.Peek() as DialogueArgs;
+            conversation = currentConversationArgs.currentConversation;
+        } else {
+            Debug.LogWarning("Loading default dialogue. Should only happen if you play directly from the scene");
+            conversation = defaultConversation;
+        }
+
         RectTransform mainPanelTransform = GameObject.FindGameObjectWithTag("MainPanel").GetComponent<RectTransform>();
         storyUI = (RectTransform)mainPanelTransform.Find("StoryUI");
         choiceButtonsGroup = (RectTransform)mainPanelTransform.Find("ChoiceButtons");
@@ -87,7 +100,6 @@ public class DialogueController : MonoBehaviour
         speakerNameUI.text = dialogueInfo.speakerName;
         backgroundImage.sprite = dialogueInfo.backgroundImage;
         speakerSprite.sprite = dialogueInfo.speakerSprite;
-        // speakerSprite.SetNativeSize();
         
         dialogueContentUI.text = "";
     }
@@ -102,7 +114,14 @@ public class DialogueController : MonoBehaviour
         }
 
         if (currentDialogueIndex >= conversation.dialogues.Length){
-            // Debug.Log("Mudamos a cena :)");
+            SceneTracker.sceneArgs.Dequeue();
+            
+            if (SceneTracker.sceneArgs.Count == 0) {
+                Debug.Log("Acabou o jogo!");
+                fader.TransitionToScene(0);
+            } else {
+                fader.TransitionToScene(combatSceneIndex);
+            }
             return;
         }
 

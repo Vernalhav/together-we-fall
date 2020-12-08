@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 using DG.Tweening;
 
@@ -17,12 +18,28 @@ public class DialogueFader : MonoBehaviour
 
     void Awake()
     {
-        blackSquare.color = new Color(overlayColor.r, overlayColor.g, overlayColor.b, 0);
+        blackSquare.color = new Color(overlayColor.r, overlayColor.g, overlayColor.b, 1);
         fadeText.color = new Color(textColor.r, textColor.g, textColor.b, 0);
+    }
+
+    private void Start() {
+        blackSquare.gameObject.SetActive(true);
+        
+        Sequence fadeSequence = DOTween.Sequence();
+        fadeSequence.AppendInterval(1f)
+                    .Append(blackSquare.DOFade(0f, 1f));
     }
 
     private void OnValidate() {
         Awake();
+    }
+
+    public void TransitionToScene(int sceneIndex, int fadeDuration = 1) {
+        // Sequence fadeSequence = DOTween.Sequence();
+        // fadeSequence.AppendInterval(1f)
+        //             .Append(blackSquare.DOFade(1f, fadeDuration))
+        //             .AppendCallback(() => SceneManager.LoadScene(sceneIndex));
+        SceneManager.LoadScene(sceneIndex);
     }
 
     /**

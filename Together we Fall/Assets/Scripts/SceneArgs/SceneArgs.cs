@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
 
-public class SceneArgs : ScriptableObject
+public abstract class SceneArgs : ScriptableObject
 {
 }

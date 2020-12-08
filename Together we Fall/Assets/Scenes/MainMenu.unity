@@ -204,8 +204,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 725681320}
-        m_MethodName: LoadSceneIndex
-        m_Mode: 3
+        m_MethodName: LoadInitialScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -632,6 +632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a204f675e9d7b194fb1dbacecaa83aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueSceneIndex: 1
+  combatSceneIndex: 2
 --- !u!114 &725681321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7f02d642041dc4a94c2755c4ab91c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainGameContent: {fileID: 0}
+  mainGameContent: {fileID: 11400000, guid: ed021d5937c643843b03c762cedc7ecb, type: 2}
 --- !u!1 &821130527
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +684,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.043426305, g: 0.26415092, b: 0.008721969, a: 1}
+  m_BackGroundColor: {r: 0.025193756, g: 0.1509434, b: 0.004983983, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -739,7 +741,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fecf5dec6844e824692eddbf8cc38b9c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 798930586c69bed4185e1e59779e3089, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
