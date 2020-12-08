@@ -42,9 +42,7 @@ public class DialogueFader : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    /**
-        Duration is the time in seconds that the screen will be fully blacked out after text appeared
-    */
+    /* Duration is the time in seconds that the screen will be fully blacked out after text appeared */
     public void Fade(TweenCallback OnFadeInEnd, TweenCallback OnFadeOutEnd,
                     float duration = 3, float textFadeDuration = 1, float fadeDuration = 1, string text = "") {
 

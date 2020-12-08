@@ -91,9 +91,9 @@ public class GameManager: MonoBehaviour
                 
                 if (SceneTracker.sceneArgs.Count == 0) {
                     Debug.Log("Acabou o jogo!");
-                    SceneManager.LoadScene(0);
+                    SceneManager.LoadScene((int)SceneIndexes.MainMenu);
                 } else {
-                    SceneManager.LoadScene(1);
+                    SceneManager.LoadScene((int)SceneIndexes.DialogueScene);
                 }
                 break;
         }
@@ -101,12 +101,12 @@ public class GameManager: MonoBehaviour
 
     public void ResetLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene((int)SceneIndexes.CombatScene);
     }
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene((int)SceneIndexes.MainMenu);
     }
 
 }
