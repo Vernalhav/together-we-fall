@@ -16,6 +16,11 @@ public class Bullet : MonoBehaviour
         damage = _dmg;
     }
     
+    void OnBecameInvisible()
+    {
+        gameObject.SetActive(false);
+    }
+
     void OnTriggerEnter2D(Collider2D other){
         // TODO: Refactor!
         if(owner == "Enemy" && (other.gameObject.CompareTag("Soldier") || 

@@ -7,8 +7,10 @@ using UnityEngine.PlayerLoop;
 
 public class Soldier : Combatent
 {
-    [SerializeField] private AIPath myPath;
-  
+    [SerializeField] private AIPath myPath; 
+    [SerializeField] private List<AudioSource> walkSounds;
+    private AudioSource walkSound;
+    
     private float time = 0;
        
     void Start()
@@ -25,6 +27,15 @@ public class Soldier : Combatent
         range.enemiesTags = data.enemiesTags;
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
+        PlayRandomWalk();
+    }
+
+    private void PlayRandomWalk()
+    {
+        if(walkSounds.Count > 0){
+                walkSound = walkSounds[UnityEngine.Random.Range(0, walkSounds.Count)];
+                walkSound.Play();
+        }
     }
 
     private void FixedUpdate()
@@ -35,18 +46,23 @@ public class Soldier : Combatent
         {
             time = 0;
             Combatent target = NextEnemy();
+            
             if (target != null){
                 Attack(target.transform);
             }
+
         } else if (enemiesList.Count <= 0 && myPath.enabled == false)
         {
             myPath.enabled = true;
-            //Debug.Log("Habilitei o path! " + enemiesList.Count);
+            PlayRandomWalk();
         }
     }
+    
     public override void FoundEnemy(Combatent e)
     {
         myPath.enabled = false;
+        if(walkSound != null)
+            walkSound.Stop();
         enemiesList.Add(e);
     }
 }

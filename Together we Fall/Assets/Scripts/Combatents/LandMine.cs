@@ -22,7 +22,6 @@ public class LandMine : Enemy
     public override void ReceiveDamage(float _dmg)
     {
         base.ReceiveDamage(_dmg);
-        //UpdateHealthColor();
     }
 
     public override void FoundEnemy(Combatent e)
@@ -32,6 +31,8 @@ public class LandMine : Enemy
 
     private void Explode()
     {
+        PlayShootSound();
+
         mySr.enabled = false;
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, layerToAttack);
         foreach (var hitCollider in hitColliders)
