@@ -31,6 +31,8 @@ public class DialogueController : MonoBehaviour
     [SerializeField]
     private Image backgroundImage;
     [SerializeField]
+    private Image effectImage;
+    [SerializeField]
     private Image speakerSprite;
 
     private ConversationData conversation;
@@ -99,7 +101,9 @@ public class DialogueController : MonoBehaviour
     {
         speakerNameUI.text = dialogueInfo.speakerName;
         backgroundImage.sprite = dialogueInfo.backgroundImage;
+        effectImage.sprite = dialogueInfo.imageEffect;
         speakerSprite.sprite = dialogueInfo.speakerSprite;
+        speakerSprite.GetComponent<Shadow>().enabled = dialogueInfo.setShadow;
         
         dialogueContentUI.text = "";
     }

@@ -1330,6 +1330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escapeKey: 8
   backgroundImage: {fileID: 434607186}
+  effectImage: {fileID: 3835958247224986672}
   speakerSprite: {fileID: 1423689869}
   fader: {fileID: 297743496}
   charTypeDelay: 0.03
@@ -2216,3 +2217,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3835958247224986670}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3835958247224986672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3835958248038503754, guid: 29ae4aa890dc7de4184ae0cc94f94079,
+    type: 3}
+  m_PrefabInstance: {fileID: 3835958247224986670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -15,6 +15,7 @@ public struct DialogueInfo
     public string speakerName;
     public Sprite speakerSprite;
     public Sprite backgroundImage;
+    public Sprite imageEffect;
     public bool setShadow;
 
     public DialogueData dialogue;    
