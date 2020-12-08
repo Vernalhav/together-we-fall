@@ -39,6 +39,7 @@ public class Enemy : Combatent
 
         if (_distance <= attackRadius && time >= 1 / fireRate)
         {
+            PlayShootSound();
             Attack(_actTarget.transform);
             time = 0;
         }
