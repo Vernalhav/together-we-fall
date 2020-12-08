@@ -65,6 +65,8 @@ public class DialogueController : MonoBehaviour
     [SerializeField]
     private ConversationData defaultConversation;
 
+    private bool dialogueFinished = false;
+
 
     void Awake()
     {
@@ -112,13 +114,16 @@ public class DialogueController : MonoBehaviour
         }
 
         if (currentDialogueIndex >= conversation.dialogues.Length){
-            SceneTracker.sceneArgs.Dequeue();
+            if (SceneTracker.sceneArgs.Count > 0)
+                SceneTracker.sceneArgs.Dequeue();
+
+            dialogueFinished = true;
 
             if (SceneTracker.sceneArgs.Count == 0) {
                 Debug.Log("Acabou o jogo!");
-                fader.TransitionToScene((int)SceneIndexes.MainMenu);
+                fader.TransitionToScene(SceneIndexes.MainMenu);
             } else {
-                fader.TransitionToScene((int)SceneIndexes.CombatScene);
+                fader.TransitionToScene(SceneIndexes.CombatScene);
             }
             return;
         }
@@ -247,6 +252,9 @@ public class DialogueController : MonoBehaviour
 
     public void Update()
     {
+        if (dialogueFinished)
+            return;
+
         if (Input.GetKeyDown(escapeKey)){
             SceneManager.LoadScene((int)SceneIndexes.MainMenu);
         }

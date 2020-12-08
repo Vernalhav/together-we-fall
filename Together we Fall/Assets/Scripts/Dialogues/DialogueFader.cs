@@ -34,12 +34,11 @@ public class DialogueFader : MonoBehaviour
         Awake();
     }
 
-    public void TransitionToScene(int sceneIndex, int fadeDuration = 1) {
-        // Sequence fadeSequence = DOTween.Sequence();
-        // fadeSequence.AppendInterval(1f)
-        //             .Append(blackSquare.DOFade(1f, fadeDuration))
-        //             .AppendCallback(() => SceneManager.LoadScene(sceneIndex));
-        SceneManager.LoadScene(sceneIndex);
+    public void TransitionToScene(SceneIndexes sceneIndex, int fadeDuration = 1) {
+        Sequence fadeSequence = DOTween.Sequence();
+        fadeSequence.AppendInterval(1f)
+                    .Append(blackSquare.DOFade(1f, fadeDuration))
+                    .AppendCallback(() => SceneManager.LoadScene((int)sceneIndex));
     }
 
     /* Duration is the time in seconds that the screen will be fully blacked out after text appeared */

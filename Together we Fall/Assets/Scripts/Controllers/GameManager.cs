@@ -14,7 +14,7 @@ public class GameManager: MonoBehaviour
 {
     private static GameManager _instance;
     [SerializeField] private CardUIController cardUIController;
-    [SerializeField] private DefeatUIController defeatUIController;
+    [SerializeField] private CombatFader combatFader;
 
     public static Action OnLevelFinished;
 
@@ -76,7 +76,7 @@ public class GameManager: MonoBehaviour
 
         if (condition == EndGameCondition.AllDead || condition == EndGameCondition.IreneDied) {
             _hasLost = true;
-            defeatUIController.ShowDefeatScreen("Mission failed", () => { Time.timeScale = 0; } );
+            combatFader.ShowDefeatScreen("Mission failed", () => { Time.timeScale = 0; } );
         }
         else if (condition == EndGameCondition.IreneFinished){
             if (SceneTracker.sceneArgs.Count > 0)
@@ -84,10 +84,10 @@ public class GameManager: MonoBehaviour
             
             if (SceneTracker.sceneArgs.Count == 0) {
                 Debug.Log("Acabou o jogo!");
-                SceneManager.LoadScene((int)SceneIndexes.MainMenu);
+                combatFader.TransitionToScene(SceneIndexes.MainMenu);
             }
             else {
-                SceneManager.LoadScene((int)SceneIndexes.DialogueScene);
+                combatFader.TransitionToScene(SceneIndexes.DialogueScene);
             }
         }
     }
