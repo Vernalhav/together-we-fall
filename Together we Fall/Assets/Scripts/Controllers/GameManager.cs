@@ -87,7 +87,9 @@ public class GameManager: MonoBehaviour
 
             case EndGameCondition.IreneFinished:
                 Debug.Log("Passou de fase! Irene chegou viva ao outro lado.");
-                SceneTracker.sceneArgs.Dequeue();
+                
+                if (SceneTracker.sceneArgs.Count > 0)
+                    SceneTracker.sceneArgs.Dequeue();
                 
                 if (SceneTracker.sceneArgs.Count == 0) {
                     Debug.Log("Acabou o jogo!");

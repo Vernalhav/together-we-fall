@@ -38,18 +38,18 @@ public class TroopsTracker : MonoBehaviour
 
     private void SubscribeEvents()
     {
-        OnTroopDied += TroopDied;
-        OnTroopDied += DecrementAliveOnField;
-        OnTroopFinished += TroopFinished;
-        OnTroopFinished += DecrementAliveOnField;
-        CardHandler.OnCardDeploy += IncrementAliveOnField;
         OnIreneFinished += IreneFinished;
+        OnTroopFinished += DecrementAliveOnField;
+        OnTroopDied += DecrementAliveOnField;
+        OnTroopDied += TroopDied;
+        OnTroopFinished += TroopFinished;
+        CardHandler.OnCardDeploy += IncrementAliveOnField;
     }
 
     private void OnDestroy()
     {
-        OnTroopDied -= TroopDied;
         OnTroopDied -= DecrementAliveOnField;
+        OnTroopDied -= TroopDied;
         OnTroopFinished -= TroopFinished;
         OnTroopFinished -= DecrementAliveOnField;
         CardHandler.OnCardDeploy -= IncrementAliveOnField;
@@ -87,25 +87,6 @@ public class TroopsTracker : MonoBehaviour
         CheckTroopsCondition();
     }
 
-    private void CheckTroopsCondition()
-    {
-        if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
-            gameManager.LevelCompleted(EndGameCondition.IreneDied);
-        }
-
-        if (aliveOnBattlefield == 0)
-        {
-            if (ireneFinished)
-            {
-                gameManager.LevelCompleted(EndGameCondition.IreneFinished);
-            }
-            else if (AllSoldiersDead)
-            {
-                gameManager.LevelCompleted(EndGameCondition.AllDead);
-            }
-        }
-    }
-
     private void DecrementAliveOnField(){
         if(aliveOnBattlefield > 0){
             aliveOnBattlefield--;
@@ -116,6 +97,28 @@ public class TroopsTracker : MonoBehaviour
         CheckTroopsCondition();
     }
 
+
+    private void CheckTroopsCondition()
+    {
+
+        if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
+            gameManager.LevelCompleted(EndGameCondition.IreneDied);
+        }
+        Debug.Log($"Alive on field {aliveOnBattlefield}");
+
+        if (aliveOnBattlefield == 0)
+        {
+            Debug.Log($"Alive on field should be zero now: {aliveOnBattlefield}");
+            if (ireneFinished)
+            {
+                gameManager.LevelCompleted(EndGameCondition.IreneFinished);
+            }
+            else if (AllSoldiersDead)
+            {
+                gameManager.LevelCompleted(EndGameCondition.AllDead);
+            }
+        }
+    }
 
     public void TroopDied(CombatentTypesEnum type){
         switch (type)

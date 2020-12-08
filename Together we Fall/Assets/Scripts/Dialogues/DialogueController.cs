@@ -118,7 +118,7 @@ public class DialogueController : MonoBehaviour
                 Debug.Log("Acabou o jogo!");
                 fader.TransitionToScene((int)SceneIndexes.MainMenu);
             } else {
-                fader.TransitionToScene((int)SceneIndexes.DialogueScene);
+                fader.TransitionToScene((int)SceneIndexes.CombatScene);
             }
             return;
         }
