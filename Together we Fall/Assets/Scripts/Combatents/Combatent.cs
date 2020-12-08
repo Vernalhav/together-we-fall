@@ -55,7 +55,6 @@ public abstract class Combatent: MonoBehaviour
     {
         if (deathSounds.Count > 0)
         {
-            Debug.Log("Morri: " + gameObject);
             int rand = UnityEngine.Random.Range(0, deathSounds.Count);
             AudioSource.PlayClipAtPoint(deathSounds[rand].clip, transform.position);
         }

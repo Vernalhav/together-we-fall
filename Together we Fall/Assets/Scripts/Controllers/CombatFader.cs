@@ -24,7 +24,7 @@ public class CombatFader : MonoBehaviour
                     .AppendCallback(() => blackScreen.gameObject.SetActive(false) );
     }
     
-    public void TransitionToScene(SceneIndexes sceneIndex, int fadeDuration = 1) {
+    public void TransitionToScene(SceneIndexes sceneIndex, float fadeDuration = 1) {
         blackScreen.gameObject.SetActive(true);
 
         Sequence fadeSequence = DOTween.Sequence();
@@ -33,7 +33,7 @@ public class CombatFader : MonoBehaviour
                     .AppendCallback(() => SceneManager.LoadScene((int)sceneIndex));
     }
 
-    public void ShowDefeatScreen(string text, TweenCallback onFadeInEnd, float delayUntilShow = 1f)
+    public void ShowDefeatScreen(string text, TweenCallback onFadeInStart, TweenCallback onFadeInEnd, float delayUntilShow = 1f)
     {
         defeatText.text = text;
         blackScreen.alpha = 0;
@@ -42,9 +42,10 @@ public class CombatFader : MonoBehaviour
 
         Sequence fadeSequence = DOTween.Sequence();
         fadeSequence.AppendInterval(delayUntilShow)
-                    .AppendCallback( () => { blackScreen.gameObject.SetActive(true); } )
+                    .AppendCallback( () => blackScreen.gameObject.SetActive(true) )
+                    .AppendCallback(onFadeInStart)
                     .Append(blackScreen.DOFade(1f, fadeDuration))
                     .AppendCallback(onFadeInEnd)
-                    .AppendCallback(() => {blackScreen.interactable = true; });
+                    .AppendCallback( () => blackScreen.interactable = true );
     }
 }

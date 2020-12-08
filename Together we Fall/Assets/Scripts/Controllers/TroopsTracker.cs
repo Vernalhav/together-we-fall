@@ -100,11 +100,10 @@ public class TroopsTracker : MonoBehaviour
 
     private void CheckTroopsCondition()
     {
-
-        if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
-            gameManager.LevelCompleted(EndGameCondition.IreneDied);
-        }
-
+        // if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
+        //     gameManager.LevelCompleted(EndGameCondition.IreneDied);
+        // }
+    
         if (aliveOnBattlefield == 0)
         {
             if (ireneFinished)
@@ -132,13 +131,17 @@ public class TroopsTracker : MonoBehaviour
             case CombatentTypesEnum.Runner:
                 DecreaseCardCounter(runnerCard);
                 break;
+
             case CombatentTypesEnum.Irene:
                 DecreaseCardCounter(ireneCard);
+                gameManager.LevelCompleted(EndGameCondition.IreneDied);
                 break;
         }
     }
 
     public void DecreaseCardCounter(Card c){
+        Debug.Log($"Decreased card {c.name}: {c.aliveCounter}");
+
         if(c.aliveCounter > 0){
             c.aliveCounter--;
         }else{

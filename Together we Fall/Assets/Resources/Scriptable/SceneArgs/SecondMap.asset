@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3473007f22bf14683aeb3cea91ba60, type: 3}
   m_Name: SecondMap
   m_EditorClassIdentifier: 
-  mapPrefab: {fileID: 0}
+  mapPrefab: {fileID: 4384393432353331098, guid: a849ce1b5b837ce45a885b2de75ff23b,
+    type: 3}

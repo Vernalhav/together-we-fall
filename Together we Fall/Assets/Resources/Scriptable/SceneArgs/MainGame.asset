@@ -15,3 +15,5 @@ MonoBehaviour:
   mainGameContent:
   - {fileID: 11400000, guid: 08a93d20431bd5446a5a517aaaf60743, type: 2}
   - {fileID: 11400000, guid: 7d686e745367bd941af9ebcd080e2814, type: 2}
+  - {fileID: 11400000, guid: 08a93d20431bd5446a5a517aaaf60743, type: 2}
+  - {fileID: 11400000, guid: 4844aba1528c31945ba670f681695dc4, type: 2}
