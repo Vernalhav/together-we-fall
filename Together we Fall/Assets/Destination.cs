@@ -12,21 +12,15 @@ public class Destination : MonoBehaviour
 
         foreach(CombatentTypesEnum c in tags){
             if(collision.tag == c.ToString()){
-                TroopsTracker.OnTroopFinished();
-                collision.gameObject.SetActive(false);
-                
+
                 if(collision.tag == "Irene"){
                     TroopsTracker.OnIreneFinished();
                 }
-                
+
+                TroopsTracker.OnTroopFinished();
+                collision.gameObject.SetActive(false);
                 return;
             }
-            
-            
         }
-
     }
-
-    
-
 }

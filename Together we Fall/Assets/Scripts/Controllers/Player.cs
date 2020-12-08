@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(escapeKey)){
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene((int)SceneIndexes.MainMenu);
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0) && cardHandler.selectedCard != null)
+        if ((Input.GetMouseButton(0) && cardHandler.selectedCard != null) && !GameManager.Instance.hasLost)
         {
             if (time >= 1/fireRate){
                 time = 0;
@@ -59,7 +59,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // This function is called by CardUIController
     public void PutSoldier(Vector3 mousePos)
     {
         worldPos = mousePos;

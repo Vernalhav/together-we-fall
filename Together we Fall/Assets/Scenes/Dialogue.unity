@@ -1331,13 +1331,14 @@ MonoBehaviour:
   escapeKey: 8
   backgroundImage: {fileID: 434607186}
   speakerSprite: {fileID: 1423689869}
-  conversation: {fileID: 11400000, guid: eaf7e232f14a13d4db40283501be2547, type: 2}
   fader: {fileID: 297743496}
   charTypeDelay: 0.03
   commaDelayMultiplier: 8
   punctuationDelayMultiplier: 20
   typeAudioSource: {fileID: 605340882}
   typeAudio: {fileID: 8300000, guid: 1cf443737a6232e4fad8d051a84735f1, type: 3}
+  defaultConversation: {fileID: 11400000, guid: eaf7e232f14a13d4db40283501be2547,
+    type: 2}
 --- !u!1 &1193584399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2068357412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1932,7 +1933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
