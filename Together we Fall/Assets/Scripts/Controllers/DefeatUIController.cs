@@ -17,14 +17,17 @@ public class DefeatUIController : MonoBehaviour
         defeatScreen.alpha = 0;
     }
 
-    public void ShowDefeatScreen(string text, float delayUntilShow = 1f)
+    public void ShowDefeatScreen(string text, TweenCallback onFadeInEnd, float delayUntilShow = 1f)
     {
         defeatText.text = text;
         defeatScreen.alpha = 0;
+        defeatScreen.interactable = false;
 
         Sequence fadeSequence = DOTween.Sequence();
         fadeSequence.AppendInterval(delayUntilShow)
                     .AppendCallback( () => { defeatScreen.gameObject.SetActive(true); } )
-                    .Append(defeatScreen.DOFade(1f, fadeDuration));
+                    .Append(defeatScreen.DOFade(1f, fadeDuration))
+                    .AppendCallback(onFadeInEnd)
+                    .AppendCallback(() => {defeatScreen.interactable = true; });
     }
 }

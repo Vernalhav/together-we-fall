@@ -74,40 +74,33 @@ public class GameManager: MonoBehaviour
     public void LevelCompleted(EndGameCondition condition){
         NormalizeTimeScale();
 
-        switch(condition){
-            case EndGameCondition.AllDead:
-                _hasLost = true;
-                defeatUIController.ShowDefeatScreen("Mission failed: all troops died");
-                break;
-
-            case EndGameCondition.IreneDied:
-                _hasLost = true;
-                defeatUIController.ShowDefeatScreen("Mission failed: Irene died");
-                break;
-
-            case EndGameCondition.IreneFinished:
-                Debug.Log("Passou de fase! Irene chegou viva ao outro lado.");
-                
-                if (SceneTracker.sceneArgs.Count > 0)
-                    SceneTracker.sceneArgs.Dequeue();
-                
-                if (SceneTracker.sceneArgs.Count == 0) {
-                    Debug.Log("Acabou o jogo!");
-                    SceneManager.LoadScene((int)SceneIndexes.MainMenu);
-                } else {
-                    SceneManager.LoadScene((int)SceneIndexes.DialogueScene);
-                }
-                break;
+        if (condition == EndGameCondition.AllDead || condition == EndGameCondition.IreneDied) {
+            _hasLost = true;
+            defeatUIController.ShowDefeatScreen("Mission failed", () => { Time.timeScale = 0; } );
+        }
+        else if (condition == EndGameCondition.IreneFinished){
+            if (SceneTracker.sceneArgs.Count > 0)
+                SceneTracker.sceneArgs.Dequeue();
+            
+            if (SceneTracker.sceneArgs.Count == 0) {
+                Debug.Log("Acabou o jogo!");
+                SceneManager.LoadScene((int)SceneIndexes.MainMenu);
+            }
+            else {
+                SceneManager.LoadScene((int)SceneIndexes.DialogueScene);
+            }
         }
     }
 
     public void ResetLevel()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene((int)SceneIndexes.CombatScene);
     }
 
     public void ReturnToMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene((int)SceneIndexes.MainMenu);
     }
 
