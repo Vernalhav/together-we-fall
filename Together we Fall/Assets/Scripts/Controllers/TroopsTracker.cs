@@ -104,11 +104,9 @@ public class TroopsTracker : MonoBehaviour
         if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
             gameManager.LevelCompleted(EndGameCondition.IreneDied);
         }
-        Debug.Log($"Alive on field {aliveOnBattlefield}");
 
         if (aliveOnBattlefield == 0)
         {
-            Debug.Log($"Alive on field should be zero now: {aliveOnBattlefield}");
             if (ireneFinished)
             {
                 gameManager.LevelCompleted(EndGameCondition.IreneFinished);

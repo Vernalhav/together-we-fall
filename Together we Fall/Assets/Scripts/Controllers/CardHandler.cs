@@ -9,7 +9,6 @@ public class CardHandler : MonoBehaviour
     public static Action OnCardDeploy;
     public Deck playerDeck;
     public Dictionary<Card, int> cardCounterInGame;
-    [HideInInspector]
     public Card selectedCard;
 
     private void Start()
