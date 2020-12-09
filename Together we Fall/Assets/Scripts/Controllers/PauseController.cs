@@ -19,11 +19,15 @@ public class PauseController : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private Slider SFXSlider;
     [SerializeField] private Slider musicSlider;
 
+    private float previousTimeScale;
+
     private bool _isPaused = false;
     public bool isPaused { get { return _isPaused; } }
 
     private void Start()
     {
+        previousTimeScale = Time.timeScale;
+
         _isPaused = false;
         pauseButtonGroup.alpha = 0.5f;
         buttonImage.sprite = pauseImage;
@@ -42,12 +46,14 @@ public class PauseController : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void PauseUnpause()
     {
         if (!_isPaused) {
+            previousTimeScale = Time.timeScale;
             Time.timeScale = 0;
+
             buttonImage.sprite = unpauseImage;
             pauseGroup.gameObject.SetActive(true);
         }
         else {
-            Time.timeScale = 1;
+            Time.timeScale = previousTimeScale;
             buttonImage.sprite = pauseImage;
             pauseGroup.gameObject.SetActive(false);
         }
