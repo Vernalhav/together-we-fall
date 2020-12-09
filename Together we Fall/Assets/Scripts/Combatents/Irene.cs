@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Irene : Soldier
 {    
-    private float time = 0;
-       
     void Start()
     {
         health = data.maxLife;

@@ -38,18 +38,18 @@ public class TroopsTracker : MonoBehaviour
 
     private void SubscribeEvents()
     {
-        OnTroopDied += TroopDied;
-        OnTroopDied += DecrementAliveOnField;
-        OnTroopFinished += TroopFinished;
-        OnTroopFinished += DecrementAliveOnField;
-        CardHandler.OnCardDeploy += IncrementAliveOnField;
         OnIreneFinished += IreneFinished;
+        OnTroopFinished += DecrementAliveOnField;
+        OnTroopDied += DecrementAliveOnField;
+        OnTroopDied += TroopDied;
+        OnTroopFinished += TroopFinished;
+        CardHandler.OnCardDeploy += IncrementAliveOnField;
     }
 
     private void OnDestroy()
     {
-        OnTroopDied -= TroopDied;
         OnTroopDied -= DecrementAliveOnField;
+        OnTroopDied -= TroopDied;
         OnTroopFinished -= TroopFinished;
         OnTroopFinished -= DecrementAliveOnField;
         CardHandler.OnCardDeploy -= IncrementAliveOnField;
@@ -87,12 +87,23 @@ public class TroopsTracker : MonoBehaviour
         CheckTroopsCondition();
     }
 
-    private void CheckTroopsCondition()
-    {
-        if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
-            gameManager.LevelCompleted(EndGameCondition.IreneDied);
+    private void DecrementAliveOnField(){
+        if(aliveOnBattlefield > 0){
+            aliveOnBattlefield--;
+        }else{
+            Debug.LogWarning("Tentou decrementar quando não deveria.");
         }
 
+        CheckTroopsCondition();
+    }
+
+
+    private void CheckTroopsCondition()
+    {
+        // if(ireneCard.aliveCounter == 0 && !GameManager.Instance.hasLost){
+        //     gameManager.LevelCompleted(EndGameCondition.IreneDied);
+        // }
+    
         if (aliveOnBattlefield == 0)
         {
             if (ireneFinished)
@@ -105,17 +116,6 @@ public class TroopsTracker : MonoBehaviour
             }
         }
     }
-
-    private void DecrementAliveOnField(){
-        if(aliveOnBattlefield > 0){
-            aliveOnBattlefield--;
-        }else{
-            Debug.LogWarning("Tentou decrementar quando não deveria.");
-        }
-
-        CheckTroopsCondition();
-    }
-
 
     public void TroopDied(CombatentTypesEnum type){
         switch (type)
@@ -131,13 +131,17 @@ public class TroopsTracker : MonoBehaviour
             case CombatentTypesEnum.Runner:
                 DecreaseCardCounter(runnerCard);
                 break;
+
             case CombatentTypesEnum.Irene:
                 DecreaseCardCounter(ireneCard);
+                gameManager.LevelCompleted(EndGameCondition.IreneDied);
                 break;
         }
     }
 
     public void DecreaseCardCounter(Card c){
+        Debug.Log($"Decreased card {c.name}: {c.aliveCounter}");
+
         if(c.aliveCounter > 0){
             c.aliveCounter--;
         }else{

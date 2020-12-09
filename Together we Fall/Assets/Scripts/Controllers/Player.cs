@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(escapeKey)){
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene((int)SceneIndexes.MainMenu);
         }
 
         if (Input.GetMouseButtonUp(0))

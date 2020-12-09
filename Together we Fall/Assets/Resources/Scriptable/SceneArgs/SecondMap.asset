@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b0f6db184d98ec45a47f36fe231b1fa, type: 3}
-  m_Name: RunnerCard
+  m_Script: {fileID: 11500000, guid: 9d3473007f22bf14683aeb3cea91ba60, type: 3}
+  m_Name: SecondMap
   m_EditorClassIdentifier: 
-  aliveCounter: 100
-  soldierPrefab: {fileID: 9182485378865670358, guid: ffb49dda2a3f4c34c8866eb307be2444,
+  mapPrefab: {fileID: 4384393432353331098, guid: a849ce1b5b837ce45a885b2de75ff23b,
     type: 3}
-  cardType: 2
