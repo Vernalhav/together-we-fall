@@ -14,23 +14,28 @@ public class MainMenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private float myWidth;
     private DOTween hoverAnim;
 
-    public void Start()
+    private void Awake()
     {
         myHeight = myTransform.rect.height;
         myWidth = myTransform.rect.width;
     }
 
+    private void OnEnable() {
+        myText.color = defaultColour;
+        myTransform.sizeDelta = new Vector2(myWidth, myHeight);
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         myText.color = hoverColour;
-
-        myTransform.DOSizeDelta( new Vector2(myWidth + 20, myHeight), 0.5f );
+        if (myTransform != null)
+            myTransform.DOSizeDelta( new Vector2(myWidth + 20, myHeight), 0.5f );
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         myText.color = defaultColour;
-        myTransform.DOSizeDelta( new Vector2(myWidth, myHeight), 0.5f );
+        if (myTransform != null)
+            myTransform.DOSizeDelta( new Vector2(myWidth, myHeight), 0.5f );
     }
- 
 }
