@@ -45,7 +45,7 @@ public class GameManager: MonoBehaviour
 
     private void Awake()
     {
-        combatThemeAudioSource.volume = 0;
+        combatThemeAudioSource.volume = 0.00001f;
 
         if (SceneTracker.sceneArgs.Count > 0 && SceneTracker.sceneArgs.Peek() is CombatArgs){
             CombatArgs currentLevel = SceneTracker.sceneArgs.Peek() as CombatArgs;
@@ -62,7 +62,7 @@ public class GameManager: MonoBehaviour
         TroopsTracker.OnIreneFinished += SpeedUpGame;
         OnLevelFinished += NormalizeTimeScale;
 
-        DOTween.To(() => combatThemeAudioSource.volume, (float x) => combatThemeAudioSource.volume = x, 1f, 10f);
+        DOTween.To(() => combatThemeAudioSource.volume, (float x) => combatThemeAudioSource.volume = x, 1f, 4f).SetEase(Ease.OutQuad);
     }
 
     void OnDestroy()
@@ -85,7 +85,7 @@ public class GameManager: MonoBehaviour
     {
         NormalizeTimeScale();
 
-        DOTween.To(() => combatThemeAudioSource.volume, (float x) => combatThemeAudioSource.volume = x, 0f, 1f);
+        DOTween.To(() => combatThemeAudioSource.volume, (float x) => combatThemeAudioSource.volume = x, 0.00001f, 1f);
 
         if (condition == EndGameCondition.AllDead || condition == EndGameCondition.IreneDied) {
             _hasLost = true;
