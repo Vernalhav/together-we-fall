@@ -28,6 +28,8 @@ public class Soldier : Combatent
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
         PlayRandomWalk();
+        animator = GetComponent<Animator>();
+        animator.SetBool("Moving", true);
     }
 
     private void PlayRandomWalk()
@@ -54,6 +56,7 @@ public class Soldier : Combatent
         } else if (enemiesList.Count <= 0 && myPath.enabled == false)
         {
             myPath.enabled = true;
+            animator.SetBool("Moving", true);
             PlayRandomWalk();
         }
     }
@@ -61,6 +64,7 @@ public class Soldier : Combatent
     public override void FoundEnemy(Combatent e)
     {
         myPath.enabled = false;
+        animator.SetBool("Moving", false);
         if(walkSound != null)
             walkSound.Stop();
         enemiesList.Add(e);

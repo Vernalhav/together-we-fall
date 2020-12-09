@@ -31,6 +31,8 @@ public class DialogueController : MonoBehaviour
     [SerializeField]
     private Image backgroundImage;
     [SerializeField]
+    private Image effectImage;
+    [SerializeField]
     private Image speakerSprite;
 
     private ConversationData conversation;
@@ -50,6 +52,8 @@ public class DialogueController : MonoBehaviour
     private int punctuationDelayMultiplier = 10;
     [SerializeField]
     private AudioSource typeAudioSource;
+    [SerializeField]
+    private AudioSource motifAudioSource;
     [SerializeField]
     private AudioClip typeAudio;
 
@@ -99,7 +103,9 @@ public class DialogueController : MonoBehaviour
     {
         speakerNameUI.text = dialogueInfo.speakerName;
         backgroundImage.sprite = dialogueInfo.backgroundImage;
+        effectImage.sprite = dialogueInfo.imageEffect;
         speakerSprite.sprite = dialogueInfo.speakerSprite;
+        speakerSprite.GetComponent<Shadow>().enabled = dialogueInfo.setShadow;
         
         dialogueContentUI.text = "";
     }
@@ -135,7 +141,7 @@ public class DialogueController : MonoBehaviour
         TweenCallback onFadeInEnd = () => {
             SetupDialogueSprites(nextDialogue);
             if (fadeClip != null)
-                typeAudioSource.PlayOneShot(fadeClip);
+                motifAudioSource.PlayOneShot(fadeClip);
         };
 
         TweenCallback onFadeOutEnd = () => {
