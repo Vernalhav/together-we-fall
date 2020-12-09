@@ -53,6 +53,8 @@ public class DialogueController : MonoBehaviour
     [SerializeField]
     private AudioSource typeAudioSource;
     [SerializeField]
+    private AudioSource motifAudioSource;
+    [SerializeField]
     private AudioClip typeAudio;
 
     private string[] lines;
@@ -139,7 +141,7 @@ public class DialogueController : MonoBehaviour
         TweenCallback onFadeInEnd = () => {
             SetupDialogueSprites(nextDialogue);
             if (fadeClip != null)
-                typeAudioSource.PlayOneShot(fadeClip);
+                motifAudioSource.PlayOneShot(fadeClip);
         };
 
         TweenCallback onFadeOutEnd = () => {
