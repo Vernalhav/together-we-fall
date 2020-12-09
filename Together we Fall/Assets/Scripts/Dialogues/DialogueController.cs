@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 
@@ -15,7 +16,7 @@ using DG.Tweening;
     If there are no choices, the next Dialogue in the Conversation queue will be loaded.
     A conversation may have Dialogues of different speakers.
 */
-public class DialogueController : MonoBehaviour
+public class DialogueController : MonoBehaviour, IPointerClickHandler
 {
     public KeyCode escapeKey;
 
@@ -60,7 +61,9 @@ public class DialogueController : MonoBehaviour
     private string[] lines;
     private int currentLineIndex;
     private int maxLines;
-
+   
+    [SerializeField]
+    private PauseController pauseController;
     private bool isFading = false;
 
     private bool isTyping = false;
@@ -279,25 +282,20 @@ public class DialogueController : MonoBehaviour
         for (int i = 0; i < textString.Length; i++){
             dialogueContentUI.text += textString[i];
             
-            if (textString[i] != ' ' && textString[i] != '\n' && textString[i] != '\r'){
-                Debug.Log("PLAC");
+            if (textString[i] != ' ' && textString[i] != '\n' && textString[i] != '\r')
                 typeAudioSource.PlayOneShot(typeAudio);
-            }
+
             yield return new WaitForSeconds( GetTypeDelay(textString, i) );
         }
         isTyping = false;
     }
 
-    public void Update()
+    public void OnPointerClick(PointerEventData e)
     {
         if (dialogueFinished)
             return;
 
-        if (Input.GetKeyDown(escapeKey)){
-            SceneManager.LoadScene((int)SceneIndexes.MainMenu);
-        }
-
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0)) && !isFading){
+        if (!isFading && !pauseController.isPaused){
 
             if (isTyping){
                 SkipTypingAnimation();
