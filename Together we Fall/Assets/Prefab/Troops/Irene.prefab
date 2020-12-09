@@ -80,9 +80,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.36414567}
   serializedVersion: 2
-  m_Radius: 0.88114923
+  m_Radius: 0.097685136
 --- !u!114 &8417646163759383734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 9182485378865670358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.095355, z: 0}
-  m_LocalScale: {x: 0.19486314, y: 0.19486314, z: 0.19486314}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 9187850207652237652}
   - {fileID: 5596089849609198781}
@@ -225,14 +225,14 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9182485378865670358}
   m_BodyType: 1
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 572f8f0ad2fb9d14fb8150ce9a3d3be1, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -250,8 +250,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09745206, y: 0.30211675}
-  m_Size: {x: 0.33634618, y: 0.6771977}
+  m_Offset: {x: -0.01173228, y: -0.032969713}
+  m_Size: {x: 2.4403782, y: 4.059235}
   m_Direction: 0
 --- !u!212 &6439344211626510166
 SpriteRenderer:
@@ -292,9 +292,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1972824461282315757, guid: 7f4894f392c088249b44ec084ddcc87d,
+  m_Sprite: {fileID: 7720636713068740370, guid: 1a2b18b72b711bd48b7f899959e52c00,
     type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   deathSounds:
   - {fileID: 3062900152643896071}
   shootSounds: []
+  animator: {fileID: 0}
   data: {fileID: 11400000, guid: 7f4ad964513deb146916433f990a6690, type: 2}
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
     type: 3}
@@ -353,7 +354,7 @@ Animator:
   m_GameObject: {fileID: 9182485378865670358}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 71a58a5a04a2223438c6e6b70c56a606, type: 2}
+  m_Controller: {fileID: 9100000, guid: 66193119a68047142a53780bdc885cad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
