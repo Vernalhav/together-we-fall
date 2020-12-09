@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef890fe21bd32764ebfb012939d90bad, type: 3}
   m_Name: Soldier
   m_EditorClassIdentifier: 
-  health: 100
+  myType: 0
   maxLife: 100
   attackRadius: 2
   projectileSpeed: 2
   fireRate: 1.5
   damage: 5
-  sr: {fileID: 0}
+  moveSpeed: 1.4
   enemiesTags: 03000000
-  bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb, type: 3}
+  bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
+    type: 3}

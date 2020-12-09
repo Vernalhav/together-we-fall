@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Irene
   m_EditorClassIdentifier: 
   myType: 4
-  health: 50
   maxLife: 50
   attackRadius: 0
   projectileSpeed: 4
   fireRate: 3
   damage: 1
-  sr: {fileID: 0}
+  moveSpeed: 1.2
   enemiesTags: 
   bulletPrefab: {fileID: 0}
