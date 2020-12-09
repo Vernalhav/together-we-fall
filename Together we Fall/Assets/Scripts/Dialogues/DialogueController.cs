@@ -96,41 +96,70 @@ public class DialogueController : MonoBehaviour
         }
 
         currentDialogueIndex = 0;
-        SetupNextDialogue();
+
+        DialogueInfo initialDialogueInfo = conversation.dialogues[currentDialogueIndex++];
+        SetupDialogueSprites(initialDialogueInfo);
+
+        TweenCallback OnFadeOutEnd = () => {
+            SetupDialogue(initialDialogueInfo.dialogue);
+            setIsFading(false);
+        };
+
+        setIsFading(true);
+        fader.InitialFadeIn(message: conversation.initialMessage, OnFadeOutEnd: OnFadeOutEnd);
     }
 
     private void SetupDialogueSprites(DialogueInfo dialogueInfo)
     {
-        speakerNameUI.text = dialogueInfo.speakerName;
         backgroundImage.sprite = dialogueInfo.backgroundImage;
-        effectImage.sprite = dialogueInfo.imageEffect;
-        speakerSprite.sprite = dialogueInfo.speakerSprite;
         speakerSprite.GetComponent<Shadow>().enabled = dialogueInfo.setShadow;
+        
+        if (dialogueInfo.imageEffect != null) {
+            effectImage.sprite = dialogueInfo.imageEffect;
+            effectImage.enabled = true;
+        } else {
+            effectImage.enabled = false;
+        }
+
+        if (dialogueInfo.speakerSprite != null) {
+            speakerSprite.sprite = dialogueInfo.speakerSprite;
+            speakerSprite.enabled = true;
+        } else {
+            speakerSprite.enabled = false;
+        }
+
+        if (dialogueInfo.speakerName != "") {
+            speakerNameUI.text = dialogueInfo.speakerName;
+            speakerNameUI.transform.parent.gameObject.SetActive(true);
+        } else {
+            speakerNameUI.transform.parent.gameObject.SetActive(false);
+        }
         
         dialogueContentUI.text = "";
     }
 
+    private void ChangeScene(string message)
+    {
+        if (SceneTracker.sceneArgs.Count > 0)
+            SceneTracker.sceneArgs.Dequeue();
+
+        dialogueFinished = true;
+
+        if (SceneTracker.sceneArgs.Count == 0) {
+            Debug.Log("Acabou o jogo!");
+            fader.TransitionToScene(SceneIndexes.MainMenu, message: message);
+        } else {
+            if (SceneTracker.sceneArgs.Peek() is CombatArgs)
+                fader.TransitionToScene(SceneIndexes.CombatScene, message: message);
+            else if (SceneTracker.sceneArgs.Peek() is DialogueArgs)
+                fader.TransitionToScene(SceneIndexes.DialogueScene, message: message);
+        }
+    }
+
     private void SetupNextDialogue()
     {
-        if (currentDialogueIndex == 0){
-            DialogueInfo initialDialogueInfo = conversation.dialogues[currentDialogueIndex++];
-            SetupDialogueSprites(initialDialogueInfo);
-            SetupDialogue(initialDialogueInfo.dialogue);
-            return;
-        }
-
         if (currentDialogueIndex >= conversation.dialogues.Length){
-            if (SceneTracker.sceneArgs.Count > 0)
-                SceneTracker.sceneArgs.Dequeue();
-
-            dialogueFinished = true;
-
-            if (SceneTracker.sceneArgs.Count == 0) {
-                Debug.Log("Acabou o jogo!");
-                fader.TransitionToScene(SceneIndexes.MainMenu);
-            } else {
-                fader.TransitionToScene(SceneIndexes.CombatScene);
-            }
+            ChangeScene(conversation.dialogues[currentDialogueIndex - 1].fadeOutText);
             return;
         }
 
@@ -245,12 +274,15 @@ public class DialogueController : MonoBehaviour
         char[] textString = nextLine.ToCharArray();
         dialogueContentUI.text = "";
 
+
         isTyping = true;
         for (int i = 0; i < textString.Length; i++){
             dialogueContentUI.text += textString[i];
             
-            if (textString[i] != ' ' && textString[i] != '\n' && textString[i] != '\r')
+            if (textString[i] != ' ' && textString[i] != '\n' && textString[i] != '\r'){
+                Debug.Log("PLAC");
                 typeAudioSource.PlayOneShot(typeAudio);
+            }
             yield return new WaitForSeconds( GetTypeDelay(textString, i) );
         }
         isTyping = false;

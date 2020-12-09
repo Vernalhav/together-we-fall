@@ -1028,7 +1028,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6124285204942034319, guid: 825e3534b194ffc41982c16bfedae4ca,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: f0582aa1700e79143a792da5fa7ec723, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1402,7 +1402,7 @@ MonoBehaviour:
   typeAudioSource: {fileID: 740033859}
   motifAudioSource: {fileID: 1417899360}
   typeAudio: {fileID: 8300000, guid: 1cf443737a6232e4fad8d051a84735f1, type: 3}
-  defaultConversation: {fileID: 11400000, guid: eaf7e232f14a13d4db40283501be2547,
+  defaultConversation: {fileID: 11400000, guid: 336cb921440423c40ba1da56135ca689,
     type: 2}
 --- !u!1 &1193584399
 GameObject:
@@ -2291,6 +2291,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 263711440}
     m_Modifications:
+    - target: {fileID: 3835958248038503754, guid: 29ae4aa890dc7de4184ae0cc94f94079,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5457902053705075910, guid: 29ae4aa890dc7de4184ae0cc94f94079,
         type: 3}
       propertyPath: m_Name

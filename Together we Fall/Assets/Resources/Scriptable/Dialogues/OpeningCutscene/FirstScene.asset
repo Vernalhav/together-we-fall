@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45164166571961845af28485729ddb92, type: 3}
-  m_Name: OpeningCutscene
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: FirstScene
   m_EditorClassIdentifier: 
-  currentConversation: {fileID: 11400000, guid: 336cb921440423c40ba1da56135ca689,
-    type: 2}
+  story: "War rages on the continent of Lorem for over 3 years. The two main forces
+    in opposition are the countries of Pazzio and Svorov.\r"
+  opt1: 
+  opt2: 
+  answers: []

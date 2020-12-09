@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "NewConversation", menuName = "Dialogues/New Conversation")]
 public class ConversationData : ScriptableObject
 {
+    public string initialMessage;
     public DialogueInfo[] dialogues;
 }
 
