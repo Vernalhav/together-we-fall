@@ -22,23 +22,47 @@ public class DialogueFader : MonoBehaviour
         fadeText.color = new Color(textColor.r, textColor.g, textColor.b, 0);
     }
 
-    private void Start() {
+    public void InitialFadeIn(TweenCallback OnFadeOutEnd, string message = "") {
         blackSquare.gameObject.SetActive(true);
-        
         Sequence fadeSequence = DOTween.Sequence();
-        fadeSequence.AppendInterval(1f)
-                    .Append(blackSquare.DOFade(0f, 1f));
+        
+        if (message == ""){
+            fadeSequence.AppendInterval(1f)
+                        .Append(blackSquare.DOFade(0f, 1f))
+                        .AppendCallback(OnFadeOutEnd);
+        }
+        else {
+            fadeText.text = message;
+            fadeSequence.Append(DOTween.ToAlpha(() => fadeText.color, x => fadeText.color = x, 1f, 1f))
+                        .AppendInterval(2f)
+                        .Append(DOTween.ToAlpha(() => fadeText.color, x => fadeText.color = x, 0f, 1f))
+                        .Append(blackSquare.DOFade(0f, 1f))
+                        .AppendCallback(OnFadeOutEnd);
+        }
     }
 
     private void OnValidate() {
         Awake();
     }
 
-    public void TransitionToScene(SceneIndexes sceneIndex, int fadeDuration = 1) {
-        Sequence fadeSequence = DOTween.Sequence();
-        fadeSequence.AppendInterval(1f)
-                    .Append(blackSquare.DOFade(1f, fadeDuration))
-                    .AppendCallback(() => SceneManager.LoadScene((int)sceneIndex));
+    public void TransitionToScene(SceneIndexes sceneIndex, int fadeDuration = 1, string message = "") {
+        if (message == "") {
+            Sequence fadeSequence = DOTween.Sequence();
+            fadeSequence.AppendInterval(1f)
+                        .Append(blackSquare.DOFade(1f, fadeDuration))
+                        .AppendCallback(() => SceneManager.LoadScene((int)sceneIndex));
+        }
+        else {
+            fadeText.text = message;
+
+            Sequence fadeSequence = DOTween.Sequence();
+            fadeSequence.AppendInterval(1f)
+                        .Append(blackSquare.DOFade(1f, fadeDuration))
+                        .Append(DOTween.ToAlpha(() => fadeText.color, x => fadeText.color = x, 1f, 1f))
+                        .AppendInterval(3f)
+                        .Append(DOTween.ToAlpha(() => fadeText.color, x => fadeText.color = x, 0f, 1f))
+                        .AppendCallback(() => SceneManager.LoadScene((int)sceneIndex));
+        }
     }
 
     /* Duration is the time in seconds that the screen will be fully blacked out after text appeared */
