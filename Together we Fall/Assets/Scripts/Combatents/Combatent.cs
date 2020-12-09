@@ -8,6 +8,8 @@ public abstract class Combatent: MonoBehaviour
 {
     [SerializeField] protected List<AudioSource> deathSounds;
     [SerializeField] protected List<AudioSource> shootSounds;
+
+    [SerializeField] protected Animator animator;
     
     public CombatentData data;
     public GameObject bulletPrefab;
