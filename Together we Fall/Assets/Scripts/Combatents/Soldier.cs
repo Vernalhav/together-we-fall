@@ -8,7 +8,9 @@ using UnityEngine.PlayerLoop;
 public class Soldier : Combatent
 {
     [SerializeField] private AIPath myPath; 
+
     [SerializeField] private List<AudioSource> walkSounds;
+
     private AudioSource walkSound;
     
     private float time = 0;
@@ -23,8 +25,9 @@ public class Soldier : Combatent
         fireRate = data.fireRate;
         damage = data.damage;
         bulletPrefab = data.bulletPrefab;
-
         range.enemiesTags = data.enemiesTags;
+        GetComponent<AIPath>().maxSpeed = data.moveSpeed + UnityEngine.Random.Range(-0.2f, 0.2f);
+
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
         PlayRandomWalk();

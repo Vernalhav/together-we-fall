@@ -21,6 +21,7 @@ public class CombatentData : ScriptableObject
     public float projectileSpeed = 10;
     public float fireRate = 10;
     public float damage;
+    public float moveSpeed;
 
     public List<CombatentTypesEnum> enemiesTags;
     public GameObject bulletPrefab;
