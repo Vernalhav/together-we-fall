@@ -48,9 +48,33 @@ public abstract class Combatent: MonoBehaviour
 
     protected virtual void Death()
     {
-        PlayDeathSounds();
         TroopsTracker.OnTroopDied(data.myType);
-        Destroy(gameObject);
+
+        PlayDeathSounds();
+
+        if(animator!=null)
+            animator.SetTrigger("Died");        
+        
+        Collider2D collider = GetComponent<Collider2D>();
+        enabled = false;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        if(sr != null){
+            sr.sortingOrder = 0;
+        }
+
+        if(collider != null){
+            collider.enabled = false;
+        }
+        
+        AIPath aiPath = GetComponent<AIPath>();
+
+        if(aiPath != null){
+            aiPath.enabled = false;
+        }
+
+        // Destroy(gameObject);
     }
 
     protected void PlayDeathSounds()
