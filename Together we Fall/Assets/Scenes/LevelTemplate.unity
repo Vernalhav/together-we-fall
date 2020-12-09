@@ -1585,7 +1585,7 @@ MonoBehaviour:
   cardUIController: {fileID: 400662988}
   combatFader: {fileID: 462820950}
   acceleratedTimeScale: 4
-  defaultLevelPrefab: {fileID: 4010002964563346970, guid: 058671ce8f2bc9345abcafa676ae5cd3,
+  defaultLevelPrefab: {fileID: 4384393432353331098, guid: a849ce1b5b837ce45a885b2de75ff23b,
     type: 3}
   combatThemeAudioSource: {fileID: 1704903822}
   motifAudioSource: {fileID: 427443668}
