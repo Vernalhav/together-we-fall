@@ -75,6 +75,15 @@ public class DialogueController : MonoBehaviour, IPointerClickHandler
     private bool dialogueFinished = false;
 
 
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     void Awake()
     {
         if (SceneTracker.sceneArgs.Count > 0 && SceneTracker.sceneArgs.Peek() is DialogueArgs){

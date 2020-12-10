@@ -62,6 +62,7 @@ public class GameManager: MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         troopsTracker = GetComponent<TroopsTracker>();
         _hasLost = false;
         TroopsTracker.OnIreneFinished += SpeedUpGame;
