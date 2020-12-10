@@ -12,5 +12,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb7da3274e1cf24b94dcb67668cee64, type: 3}
   m_Name: Conversation2
   m_EditorClassIdentifier: 
-  initialMessage: 
-  dialogues: []
+  initialMessage: A few days after the battle...
+  dialogues:
+  - speakerName: Irene
+    speakerSprite: {fileID: -1265705340174883840, guid: 5f78797bc14910c4ea71062e25d54533,
+      type: 3}
+    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: 2e0e8e4a7cb0c1f49b92bb1e3ac47912, type: 2}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: Dante
+    speakerSprite: {fileID: -7960608948029356370, guid: d04d06990c3b1a9418cfd3c6d4a41675,
+      type: 3}
+    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: f5844154d451ac84ba007fe3563c5c66, type: 2}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: Irene
+    speakerSprite: {fileID: -1265705340174883840, guid: 5f78797bc14910c4ea71062e25d54533,
+      type: 3}
+    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: 45d475e31c1d8e9488bfb97c63edcbe9, type: 2}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: Samantha
+    speakerSprite: {fileID: -94144387904828994, guid: 50ef772cae0bd9343912d4d69f2da7a5,
+      type: 3}
+    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: 47105ae70b2b14e44ba063e12c99d9e1, type: 2}
+    fadeOutText: A few days later, at bunker 51...
+    fadeOutSound: {fileID: 8300000, guid: c21118edc16444649a0b71d0212ed5e3, type: 3}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 0}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 0}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 0}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 0}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 0}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 0}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 0}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 0}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 0}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 0}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 0}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 0}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
