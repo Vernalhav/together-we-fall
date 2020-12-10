@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7f02d642041dc4a94c2755c4ab91c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainGameContent: {fileID: 11400000, guid: 6344e098cf1bc1e468ee061e9ff16862, type: 2}
+  mainGameContent: {fileID: 11400000, guid: ed021d5937c643843b03c762cedc7ecb, type: 2}
   deck: {fileID: 11400000, guid: 5eeee81338019c442b499073b465ff77, type: 2}
   cardCounts: 0a000000140000001e00000001000000
 --- !u!1 &793366049

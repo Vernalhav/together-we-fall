@@ -743,7 +743,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   motifAudioSource: {fileID: 1417899360}
   typeAudio: {fileID: 8300000, guid: 1cf443737a6232e4fad8d051a84735f1, type: 3}
   pauseController: {fileID: 486463686}
-  defaultConversation: {fileID: 11400000, guid: eaf7e232f14a13d4db40283501be2547,
+  defaultConversation: {fileID: 11400000, guid: 92414fc2975180c4fb2a4ae2de25fac5,
     type: 2}
 --- !u!1 &1193584399
 GameObject:

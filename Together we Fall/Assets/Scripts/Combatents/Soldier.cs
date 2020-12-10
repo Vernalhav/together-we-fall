@@ -36,6 +36,8 @@ public class Soldier : Combatent
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
         PlayRandomWalk();
         animator = GetComponent<Animator>();
+        if (animator == null)
+            Debug.LogWarning("Animator is null!");
         animator.SetBool("Moving", true);
     }
 

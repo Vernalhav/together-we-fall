@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Btuno0_1
+  m_EditorClassIdentifier: 
+  story: "As I\u2019ve said, Chief, there is no recovering Carlos. What remains to
+    be decided is how we\u2019ll go about dispatching him, and this decision falls
+    to you."
+  opt1: Understood... Kill the boy.
+  opt2: "Leave him by the woods. We\u2019ll be marching out tomorrow without him."
+  answers:
+  - {fileID: 11400000, guid: 48f7829d2d6c1ed4fa35043d1874a9c4, type: 2}
+  - {fileID: 11400000, guid: c6645543a5b0c254d9dfef623456238f, type: 2}
