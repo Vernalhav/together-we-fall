@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Samantha1
+  m_EditorClassIdentifier: 
+  story: "I\u2019m absolutely sure of it! We\u2019re a family, after all; it would
+    not be proper for family members to not fight for each other until the very end.\r\nAnd
+    if some of them are still soiling their breeches at the sight of a Svorovian
+    flag, they will lose all of this inhibition when we start marching and shouting
+    \u201CPAZZIO! PAZZIO!\u201D Hahahahaha!\r"
+  opt1: 
+  opt2: 
+  answers: []

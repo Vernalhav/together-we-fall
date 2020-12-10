@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Dante2
+  m_EditorClassIdentifier: 
+  story: "If you want my opinion, I also believe our only option is to fight them.
+    Samantha and I made some calculations and if we wanted to avoid this confrontation
+    we would have to extend our journey at least 5 more days and have almost twice
+    as many provisions as we currently have.\r\nHowever, I do think that since the
+    battle is unavoidable, we might as well get whatever edge we can on them. While
+    Samantha and her speeches might lead you to think that we should go in recklessly,
+    we must approach this situation tactically.\r"
+  opt1: "Absolutely. Let\u2019s march in after causing a distraction."
+  opt2: "Of course! Let\u2019s attack while they are changing their watch."
+  answers:
+  - {fileID: 0}
+  - {fileID: 0}
