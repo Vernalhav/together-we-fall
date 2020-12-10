@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Dante1
+  m_EditorClassIdentifier: 
+  story: "...Chief... we were scouting ahead... we were looking for any traps, as
+    usual... but our Border Control Zone was... taken *cough*.\r\nWe thought it was
+    too easy... no signs of any Svorovians... we could see the Border Control Zone
+    and thought... we thought we were done, mission complete... that we just needed
+    to... to cross it with all of you and we would be home again... home with the
+    cure. I was wrong. Svorov killed all of our men at the Zone.\r\nRemember, Chief?
+    We talked to them when we passed by the Border Control at the start of our mission...
+    Christian, Jhon, Marcelo, Julia... they are all dead. And Svorov holds the Zone
+    now...\r"
+  opt1: "Unbelievable! What do you think we should do?\r"
+  opt2: "There\u2019s no time to waste. We must fight, then!"
+  answers:
+  - {fileID: 11400000, guid: a793ec3992e53464e8dbcb70828667c1, type: 2}
+  - {fileID: 11400000, guid: e01588a446b0f9c42ac50bcd40e025aa, type: 2}

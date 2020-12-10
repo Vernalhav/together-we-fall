@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Irene0_1
+  m_EditorClassIdentifier: 
+  story: "I\u2019m glad you asked! I\u2019ve been helping out Samantha by talking
+    to the soldiers and keeping track of their morale; she\u2019s even asked for
+    my advice a few times. You wouldn\u2019t believe the amount of stories that the
+    boys tell! They really see all of you as family.\r\nI\u2019ve also spent some
+    time with Bruno and helped him by getting the things he needs when he has people
+    to treat. My mom used to tell me I would become a doctor because I never found
+    it gross to look at the inside of animals. Well, I didn\u2019t turn out to be
+    a doctor but I have certainly seen some gross things with Bruno!\r\nI don\u2019t
+    see Dante as much because ever since he got back to walking properly, all he
+    wants is to go scouting. From what we\u2019ve talked, I think he really likes
+    to be away and have some time to himself.\nHave you ever talked to him when he
+    gets philosophical? I have a feeling that\u2019s just the tip of the iceberg
+    of his inner thoughts.\r\nOh, and little Gabriel is the cutest thing, isn\u2019t
+    he? Whenever I try to talk to him, he gets red as an apple! Hahahaha!\r"
+  opt1: 
+  opt2: 
+  answers:
+  - {fileID: 11400000, guid: 74b195eaf8fd7444bb3ed1e7e721fcbd, type: 2}

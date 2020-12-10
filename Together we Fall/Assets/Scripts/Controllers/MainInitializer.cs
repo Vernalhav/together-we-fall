@@ -5,14 +5,10 @@ using UnityEngine;
 public class MainInitializer : MonoBehaviour
 {
     [SerializeField] private MainGameContent mainGameContent;
+
     [SerializeField] private Deck deck;
     //runner soldier tank irene
     [SerializeField] private List<int> cardCounts;
-
-    void Start()
-    {
-        InitializeDeck();       
-    }
 
     void Awake()
     {
@@ -20,8 +16,16 @@ public class MainInitializer : MonoBehaviour
 
         foreach(SceneArgs sceneArgs in mainGameContent.mainGameContent){
             SceneTracker.sceneArgs.Enqueue(sceneArgs);
+            Debug.Log(sceneArgs);
         }
+
     }
+
+    void Start()
+    {
+        InitializeDeck();       
+    }
+
 
     public void InitializeDeck(){
         for(int i = 0; i < deck.cards.Count; i ++){

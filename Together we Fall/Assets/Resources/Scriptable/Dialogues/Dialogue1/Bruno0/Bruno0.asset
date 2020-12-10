@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Bruno0
+  m_EditorClassIdentifier: 
+  story: "Chief, I\u2019m sorry to trouble you at this late hour, but I must speak
+    of a matter most urgent. While the soldiers were settling down to sleep, some
+    of the men noticed strange behaviour coming from Carlos.\nHis mates reported
+    seeing him with bloodshot eyes, screaming for apparently no reason and saying
+    completely nonsensical things to himself.\r\nYour thoughts are the same as mine,
+    Chief... the boy is with PS\u201120. There is no way to keep him with us any
+    longer, otherwise we\u2019ll risk our whole platoon falling victim to this plague.\nI
+    do not come to this conclusion lightly: my crew and I went through all possibilities
+    to try to recover the boy and came up empty.\r"
+  opt1: 'Goddamnit! Better to lose one than lose all: Get rid of the boy.'
+  opt2: "I can\u2019t believe it... what should we do?"
+  answers:
+  - {fileID: 11400000, guid: c6645543a5b0c254d9dfef623456238f, type: 2}
+  - {fileID: 11400000, guid: 23638ee64e116f64787eed91fe11fb98, type: 2}

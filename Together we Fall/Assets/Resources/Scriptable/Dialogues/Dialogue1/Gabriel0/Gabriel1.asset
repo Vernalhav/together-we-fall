@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Gabriel1
+  m_EditorClassIdentifier: 
+  story: "Anyway, I\u2019m glad I\u2019ve gotten the message to you, Chief, as that
+    is my duty. If you require anything from me, you can always find me with the
+    other soldiers, sir. Can you feel the chill in the air? Winter is coming!"
+  opt1: 
+  opt2: 
+  answers: []

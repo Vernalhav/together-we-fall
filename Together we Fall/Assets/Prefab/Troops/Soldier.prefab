@@ -63,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 8417646163759383720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.119, y: -0.073, z: 0}
-  m_LocalScale: {x: 2.8541892, y: 2.8541892, z: 2.8541892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1440768070498484598}
   m_RootOrder: 0
@@ -251,8 +251,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6475776, y: 0.13602853}
-  m_Size: {x: 1.9577667, y: 3.7778225}
+  m_Offset: {x: -0.7846384, y: -0.11651913}
+  m_Size: {x: 1.683645, y: 4.2829204}
   m_Direction: 0
 --- !u!212 &6439344211626510166
 SpriteRenderer:
@@ -321,7 +321,6 @@ MonoBehaviour:
   - {fileID: 6058854870369298841}
   shootSounds:
   - {fileID: 4070118691346634250}
-  animator: {fileID: 0}
   data: {fileID: 11400000, guid: 6d8b36c0ba661ca47820d919e63b4701, type: 2}
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
     type: 3}
@@ -356,7 +355,7 @@ Animator:
   m_GameObject: {fileID: 9182485378865670358}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 71a58a5a04a2223438c6e6b70c56a606, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5708a85d57373f94abd84b4f4802f64e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -13,9 +13,9 @@ public class LandMine : Enemy
     [SerializeField] SpriteRenderer mySr;
 
 
-    new void Start()
+    void Start()
     {
-        base.Start();
+        base.Awake();
         myAnimator = GetComponent<Animator>();
     }
 

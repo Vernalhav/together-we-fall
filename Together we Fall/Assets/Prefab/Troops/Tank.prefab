@@ -63,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 8417646163759383720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.119, y: -0.073, z: 0}
-  m_LocalScale: {x: 2.6992376, y: 2.6992376, z: 2.6992376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1440768070498484598}
   m_RootOrder: 0
@@ -83,7 +83,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.88114923
+  m_Radius: 30.97
 --- !u!114 &8417646163759383734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCombatent: {fileID: 9182485378865670356}
-  enemiesTags: 
+  enemiesTags: 03000000
 --- !u!1 &9182485378865670358
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   repathRate: 0.1
   canSearch: 1
   canMove: 1
-  maxSpeed: 1.56
+  maxSpeed: 1.1092039
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -251,8 +251,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.88390726, y: -0.094652176}
-  m_Size: {x: 1.9092563, y: 4.166795}
+  m_Offset: {x: -0.88390726, y: -0.084169306}
+  m_Size: {x: 1.9092563, y: 4.1458297}
   m_Direction: 0
 --- !u!212 &6439344211626510166
 SpriteRenderer:
@@ -321,7 +321,7 @@ MonoBehaviour:
   - {fileID: 4950782824837020517}
   shootSounds:
   - {fileID: 1108512739609607271}
-  animator: {fileID: 0}
+  animator: {fileID: 9182485378865670357}
   data: {fileID: 11400000, guid: ecc9883c976cdac40a0805cc64a35bf2, type: 2}
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
     type: 3}

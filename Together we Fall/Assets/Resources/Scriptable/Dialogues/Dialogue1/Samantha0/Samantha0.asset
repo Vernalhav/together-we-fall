@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Samantha0
+  m_EditorClassIdentifier: 
+  story: "Good job, everyone! I told you these Svorovian bastards had no chance against
+    us! They have numbers, weapons, discipline and every luxury their little country
+    can give them. But do you know what they don\u2019t have?! They don\u2019t have
+    a family like us!! That\u2019s what makes us better and that\u2019s what will
+    lead us to victory! Hahahahaha!!\r\nSee that, Chief? Our boys are brimming! I
+    haven\u2019t seen them excited like this in a long time. We won a great victory
+    today.\r"
+  opt1: We lost some men... it was not a good fight.
+  opt2: Indeed. We are one step closer to completing our mission.
+  answers:
+  - {fileID: 11400000, guid: 695b4e06e64bdd24cb5d9ba33dc95d31, type: 2}
+  - {fileID: 11400000, guid: 432b7a7d6fe908646b5f496fce4b7f7e, type: 2}

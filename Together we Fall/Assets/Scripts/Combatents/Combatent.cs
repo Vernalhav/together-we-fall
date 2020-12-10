@@ -9,7 +9,7 @@ public abstract class Combatent: MonoBehaviour
     [SerializeField] protected List<AudioSource> deathSounds;
     [SerializeField] protected List<AudioSource> shootSounds;
 
-    [SerializeField] protected Animator animator;
+    protected Animator animator;
     
     public CombatentData data;
     public GameObject bulletPrefab;
@@ -49,32 +49,8 @@ public abstract class Combatent: MonoBehaviour
     protected virtual void Death()
     {
         TroopsTracker.OnTroopDied(data.myType);
-
         PlayDeathSounds();
-
-        if(animator!=null)
-            animator.SetTrigger("Died");        
-        
-        Collider2D collider = GetComponent<Collider2D>();
-        enabled = false;
-
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-
-        if(sr != null){
-            sr.sortingOrder = 0;
-        }
-
-        if(collider != null){
-            collider.enabled = false;
-        }
-        
-        AIPath aiPath = GetComponent<AIPath>();
-
-        if(aiPath != null){
-            aiPath.enabled = false;
-        }
-
-        // Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     protected void PlayDeathSounds()
@@ -113,5 +89,4 @@ public abstract class Combatent: MonoBehaviour
     {
         enemiesList.Remove(cb);
     }
-
 }
