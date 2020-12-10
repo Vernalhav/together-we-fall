@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Bruno1
+  m_EditorClassIdentifier: 
+  story: "Chief!! I\u2019m almost certain that Dante is infected! Leo\u2019s blood
+    was contaminated! All of the dead soldiers here may be contaminated! We must
+    resupply and leave this place immediately!"
+  opt1: All right! Samantha! Prepare our troops to leave!
+  opt2: What do you mean?! Where the hell do we go?!
+  answers:
+  - {fileID: 11400000, guid: 2a7ff77af257692458f13ddc8782dbb7, type: 2}
+  - {fileID: 11400000, guid: b2567888f62a87748b0e55b2065fc479, type: 2}
