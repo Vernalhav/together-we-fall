@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Gabriel0_1
+  m_EditorClassIdentifier: 
+  story: "That is what the letter said, sir. I do not have the knowledge nor the
+    authority to question the Military Department\u2019s actions, sir, but the immediate
+    consequence of that decision is that we\u2019re not likely to receive any reinforcements."
+  opt1: "You said it was sent two weeks ago. The situation might have changed for
+    the better.\r"
+  opt2: "We don\u2019t need reinforcements anyways!"
+  answers:
+  - {fileID: 11400000, guid: f49dee6b0a38ae2428d0c019708c9d82, type: 2}
+  - {fileID: 11400000, guid: e9b9b2ee0e9ea604d88c34dd524e628b, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Samantha0_1
+  m_EditorClassIdentifier: 
+  story: "Aha! That\u2019s what I like to hear! Even if these cowards want to take
+    what\u2019s ours, we\u2019ll rip it out of their grimy hands."
+  opt1: 
+  opt2: 
+  answers:
+  - {fileID: 11400000, guid: f5450beb76f404649a5e63247b9731b7, type: 2}

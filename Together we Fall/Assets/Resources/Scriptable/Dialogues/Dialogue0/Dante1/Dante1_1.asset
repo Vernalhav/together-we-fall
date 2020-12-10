@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Dante1_1
+  m_EditorClassIdentifier: 
+  story: "Indeed... we don\u2019t have many fighting men, but we must do our best
+    with what we have... Our boys really believe in our cause, Chief... they believe
+    in us! We can still win this..."
+  opt1: 
+  opt2: 
+  answers: []

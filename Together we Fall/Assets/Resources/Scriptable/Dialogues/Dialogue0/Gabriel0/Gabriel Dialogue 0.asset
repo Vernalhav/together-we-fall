@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Gabriel Dialogue 0
   m_EditorClassIdentifier: 
   story: "CHIEF, CHIEF!! Dante and his men were scouting ahead for any loose Svorovian
-    commandos near Pazzio\u2019s military Border Control Zone and he got shot!\r\nHe's
-    not dead yet... They brought him over just now and made their way to Bruno\u2019s
-    tent. I came to tell you as soon as I saw them coming.\r"
+    commandos near Pazzio\u2019s military Border Control Zone and he got shot!\r\nHe\u2019s
+    not dead yet... Dante\u2019s scouts brought him over just now and made their
+    way to Bruno\u2019s tent. I came to tell you as soon as I saw them coming.\r"
   opt1: "We need to go to Bruno\u2019s tent immediately\r"
   opt2: "Tell me more about what happened\r"
   answers:
