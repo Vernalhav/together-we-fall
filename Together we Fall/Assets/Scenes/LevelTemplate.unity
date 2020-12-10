@@ -229,6 +229,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1131863767833997031, guid: 34a436420d1139d46b4b89afac99a6f9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -12.799988
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131863767833997031, guid: 34a436420d1139d46b4b89afac99a6f9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -168.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 2529045422363341763, guid: 34a436420d1139d46b4b89afac99a6f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2129,7 +2139,7 @@ MonoBehaviour:
   cardUIController: {fileID: 400662988}
   combatFader: {fileID: 462820950}
   acceleratedTimeScale: 4
-  defaultLevelPrefab: {fileID: 4384393432353331098, guid: a849ce1b5b837ce45a885b2de75ff23b,
+  defaultLevelPrefab: {fileID: 4010002964563346970, guid: 058671ce8f2bc9345abcafa676ae5cd3,
     type: 3}
   combatThemeAudioSource: {fileID: 1704903822}
   motifAudioSource: {fileID: 427443668}
