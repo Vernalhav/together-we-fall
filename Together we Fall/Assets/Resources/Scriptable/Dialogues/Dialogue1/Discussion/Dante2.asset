@@ -22,5 +22,5 @@ MonoBehaviour:
   opt1: "Absolutely. Let\u2019s march in after causing a distraction."
   opt2: "Of course! Let\u2019s attack while they are changing their watch."
   answers:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 612e9092c643b4e4ab95289c98270eef, type: 2}
+  - {fileID: 11400000, guid: d10f4a887aba44542899c882850f8f37, type: 2}

@@ -16,5 +16,4 @@ MonoBehaviour:
     draw some of them away."
   opt1: 
   opt2: 
-  answers:
-  - {fileID: 11400000, guid: abfda63358993cf46af2e34e62706987, type: 2}
+  answers: []
