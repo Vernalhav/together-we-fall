@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb7da3274e1cf24b94dcb67668cee64, type: 3}
   m_Name: InitialConversation
   m_EditorClassIdentifier: 
+  initialMessage: 
   dialogues:
   - speakerName: Irene
     speakerSprite: {fileID: -1265705340174883840, guid: 5f78797bc14910c4ea71062e25d54533,
@@ -25,18 +26,18 @@ MonoBehaviour:
   - speakerName: Dante
     speakerSprite: {fileID: -7960608948029356370, guid: d04d06990c3b1a9418cfd3c6d4a41675,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 9f5c1b368b0ce2b40add2cb22430658c, type: 3}
-    imageEffect: {fileID: 21300000, guid: 3fe38126c39b0d04a98ead910b0b6aef, type: 3}
-    setShadow: 1
+    backgroundImage: {fileID: 21300000, guid: 15c50241fe7851b40bfb472c801d9859, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
     dialogue: {fileID: 11400000, guid: a81e3a14b16bc4b41a774a976a27f1be, type: 2}
     fadeOutText: 1 week later...
     fadeOutSound: {fileID: 8300000, guid: 651cabb45091893479a218606241db48, type: 3}
   - speakerName: Gabriel
     speakerSprite: {fileID: 4276463694950988455, guid: cbc00964a73c9024a94764b89d3e075f,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 9f5c1b368b0ce2b40add2cb22430658c, type: 3}
-    imageEffect: {fileID: 21300000, guid: 3fe38126c39b0d04a98ead910b0b6aef, type: 3}
-    setShadow: 1
+    backgroundImage: {fileID: 21300000, guid: 461de72dea0e5fc4b8e1141a9f5740eb, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
     dialogue: {fileID: 11400000, guid: f403b17b9dd16e349be67823e1aa4138, type: 2}
     fadeOutText: 
     fadeOutSound: {fileID: 0}

@@ -11,12 +11,16 @@ public enum EndGameCondition{
     AllDead
 }
 
+
+[RequireComponent(typeof(TroopsTracker))]
 public class GameManager: MonoBehaviour
 {
     private static GameManager _instance;
     [SerializeField] private CardUIController cardUIController;
     [SerializeField] private CombatFader combatFader;
 
+
+    private TroopsTracker troopsTracker;
     public static Action OnLevelFinished;
 
     [SerializeField] private float acceleratedTimeScale = 2f;
@@ -58,6 +62,8 @@ public class GameManager: MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
+        troopsTracker = GetComponent<TroopsTracker>();
         _hasLost = false;
         TroopsTracker.OnIreneFinished += SpeedUpGame;
         OnLevelFinished += NormalizeTimeScale;
@@ -111,6 +117,7 @@ public class GameManager: MonoBehaviour
     public void ResetLevel()
     {
         Time.timeScale = 1;
+        troopsTracker.ResetCardsInitialState();
         SceneManager.LoadScene((int)SceneIndexes.CombatScene);
     }
 

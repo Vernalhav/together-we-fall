@@ -3,12 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct PlayerInitialState{
+    public int soldierCount;
+    public int runnerCount;
+    public int tankCount;
+    public int ireneCount;
+
+    public PlayerInitialState(int _soldierCount, int _runnerCount, int _tankCount, int _ireneCount){
+        soldierCount = _soldierCount;
+        runnerCount = _runnerCount;
+        tankCount = _tankCount;
+        ireneCount = _ireneCount;
+    }
+
+}
+
 public class TroopsTracker : MonoBehaviour
 {
     public static Action<CombatentTypesEnum> OnTroopDied;
     public static Action OnTroopFinished;
     public static Action OnIreneFinished;
-    
+
+    [SerializeField] private PlayerInitialState initialState;
+
     [SerializeField] private int troopsFinished;
     public bool ireneFinished {get; set;}
     [SerializeField] private int aliveOnBattlefield;
@@ -34,6 +51,8 @@ public class TroopsTracker : MonoBehaviour
         troopsFinished = 0;
         SubscribeEvents();
         gameManager = GameManager.Instance;
+        initialState = new PlayerInitialState(soldierCard.aliveCounter, runnerCard.aliveCounter, tankCard.aliveCounter, ireneCard.aliveCounter );
+        
     }
 
     private void SubscribeEvents()
@@ -68,6 +87,15 @@ public class TroopsTracker : MonoBehaviour
 
     public void IncrementAliveOnField(){
         aliveOnBattlefield++;
+    }
+
+
+    public void ResetCardsInitialState()
+    {
+        soldierCard.aliveCounter = initialState.soldierCount;
+        runnerCard.aliveCounter = initialState.runnerCount;
+        tankCard.aliveCounter = initialState.tankCount;
+        ireneCard.aliveCounter = initialState.ireneCount;
     }
 
     private void DecrementAliveOnField(CombatentTypesEnum c)
