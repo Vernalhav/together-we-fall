@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private void Awake() {
         if (Application.isEditor){
             Debug.Log("Refreshing player deck because we are in editor mode!");
-            RefreshDeck();
+            // RefreshDeck();
         }
     }
 

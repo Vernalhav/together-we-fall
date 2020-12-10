@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 42.81601
 --- !u!114 &168264112417269396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCombatent: {fileID: 168264113535446065}
   enemiesTags: 
---- !u!1 &168264112915393154
+--- !u!1 &168264113535446063
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,37 +70,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 168264112915393157}
-  - component: {fileID: 7521213054355800195}
-  - component: {fileID: 3871054796191696324}
+  - component: {fileID: 168264113535446062}
+  - component: {fileID: 168264113535446065}
+  - component: {fileID: 5959140517217526015}
+  - component: {fileID: 6114089422633597868}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Sniper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &168264112915393157
+--- !u!4 &168264113535446062
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168264112915393154}
+  m_GameObject: {fileID: 168264113535446063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16281953, y: 0.16281953, z: 0.16281953}
-  m_Children: []
-  m_Father: {fileID: 168264113535446062}
-  m_RootOrder: 1
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_Children:
+  - {fileID: 168264112417269397}
+  - {fileID: 2675687601385586476}
+  - {fileID: 2174134084218952243}
+  - {fileID: 6306248456847235515}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7521213054355800195
+--- !u!114 &168264113535446065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168264113535446063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e9b2db65b501048819d080d93f3b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSounds: []
+  shootSounds:
+  - {fileID: 6306248456847235514}
+  animator: {fileID: 0}
+  data: {fileID: 11400000, guid: d539c3f9c2466c043baca9613a67d451, type: 2}
+  bulletPrefab: {fileID: 0}
+  shotAnimationDuration: 0.5
+  shot: {fileID: 1616092772500131189}
+  firePoint: {fileID: 2174134084218952243}
+--- !u!212 &5959140517217526015
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168264112915393154}
+  m_GameObject: {fileID: 168264113535446063}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -144,13 +170,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3871054796191696324
+--- !u!58 &6114089422633597868
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168264112915393154}
+  m_GameObject: {fileID: 168264113535446063}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -160,62 +186,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.85
---- !u!1 &168264113535446063
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 168264113535446062}
-  - component: {fileID: 168264113535446065}
-  m_Layer: 0
-  m_Name: Sniper
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &168264113535446062
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168264113535446063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 20.97}
-  m_Children:
-  - {fileID: 168264112417269397}
-  - {fileID: 168264112915393157}
-  - {fileID: 2675687601385586476}
-  - {fileID: 2174134084218952243}
-  - {fileID: 6306248456847235515}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &168264113535446065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168264113535446063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e9b2db65b501048819d080d93f3b77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathSounds: []
-  shootSounds:
-  - {fileID: 6306248456847235514}
-  data: {fileID: 11400000, guid: d539c3f9c2466c043baca9613a67d451, type: 2}
-  bulletPrefab: {fileID: 0}
-  shotAnimationDuration: 0.5
-  shot: {fileID: 1616092772500131189}
-  firePoint: {fileID: 2174134084218952243}
 --- !u!1 &2462134619993240016
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0.047687173}
   m_Children: []
   m_Father: {fileID: 168264113535446062}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2618854275671601617
 GameObject:
@@ -275,7 +245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 168264113535446062}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &1616092772500131189
 LineRenderer:
@@ -419,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 517465288320482428, guid: d3439a45291e5a54b9a149075e36f531,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 517465288320482428, guid: d3439a45291e5a54b9a149075e36f531,
         type: 3}
