@@ -13,6 +13,7 @@ public class MainMenuController : MonoBehaviour
             return;
         }
         else if (SceneTracker.sceneArgs.Peek() is CombatArgs) {
+            Debug.Log(SceneTracker.sceneArgs.Peek());
             SceneManager.LoadScene((int)SceneIndexes.CombatScene);
         }
         else if (SceneTracker.sceneArgs.Peek() is DialogueArgs) {

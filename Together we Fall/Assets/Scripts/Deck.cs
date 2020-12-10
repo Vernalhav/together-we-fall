@@ -12,13 +12,7 @@ public class Deck : ScriptableObject
     public void ChangeCardAliveCount(int idx, int count){
         if(0 <= idx && idx < cards.Count){
             cards[idx].aliveCounter = count;
-    	    EditorUtility.SetDirty(cards[idx]);
-        }
-    }
-
-    public void SaveCards(){
-        foreach(Card c in cards){
-            EditorUtility.SetDirty(c);
+    	    // EditorUtility.SetDirty(cards[idx]);
         }
     }
 }

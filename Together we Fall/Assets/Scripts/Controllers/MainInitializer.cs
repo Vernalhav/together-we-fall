@@ -10,19 +10,22 @@ public class MainInitializer : MonoBehaviour
     //runner soldier tank irene
     [SerializeField] private List<int> cardCounts;
 
-    void Start()
-    {
-        InitializeDeck();       
-    }
-
     void Awake()
     {
         SceneTracker.sceneArgs = new Queue<SceneArgs>();
 
         foreach(SceneArgs sceneArgs in mainGameContent.mainGameContent){
             SceneTracker.sceneArgs.Enqueue(sceneArgs);
+            Debug.Log(sceneArgs);
         }
+
     }
+
+    void Start()
+    {
+        InitializeDeck();       
+    }
+
 
     public void InitializeDeck(){
         for(int i = 0; i < deck.cards.Count; i ++){
