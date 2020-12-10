@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 42.81601
+  m_Radius: 7
 --- !u!114 &168264112417269396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCombatent: {fileID: 168264113535446065}
-  enemiesTags: 
+  enemiesTags: 00000000010000000200000004000000
 --- !u!1 &168264113535446063
 GameObject:
   m_ObjectHideFlags: 0

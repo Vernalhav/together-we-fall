@@ -14,9 +14,9 @@ public class Soldier : Combatent
     private AudioSource walkSound;
     
     private float time = 0;
-       
-    void Start()
-    {
+    
+    [ContextMenu("Refresh prefab")]
+    private void Awake() {
         range = GetComponentInChildren<Range>();
         health = data.maxLife;
         maxHealth = data.maxLife;
@@ -29,6 +29,10 @@ public class Soldier : Combatent
         GetComponent<AIPath>().maxSpeed = data.moveSpeed + UnityEngine.Random.Range(-0.2f, 0.2f);
 
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
+    }
+
+    void Start()
+    {
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
         PlayRandomWalk();
         animator = GetComponent<Animator>();

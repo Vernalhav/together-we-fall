@@ -89,5 +89,4 @@ public abstract class Combatent: MonoBehaviour
     {
         enemiesList.Remove(cb);
     }
-
 }

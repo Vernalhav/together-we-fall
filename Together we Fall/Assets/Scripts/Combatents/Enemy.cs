@@ -8,7 +8,8 @@ public class Enemy : Combatent
 
     protected float time; //used in time calculation during attack
 
-    public void Start()
+    [ContextMenu("Refresh prefab")]
+    public void Awake()
     {
         range = GetComponentInChildren<Range>();
         health = data.maxLife;
