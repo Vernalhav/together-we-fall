@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0f6db184d98ec45a47f36fe231b1fa, type: 3}
   m_Name: TankCard
   m_EditorClassIdentifier: 
-  aliveCounter: 10
+  aliveCounter: 30
   soldierPrefab: {fileID: 9182485378865670358, guid: 2dce4961099526a43bdeef061ae1fbdf,
     type: 3}
   cardType: 1
