@@ -38,8 +38,8 @@ public class Soldier : Combatent
     private void PlayRandomWalk()
     {
         if(walkSounds.Count > 0){
-                walkSound = walkSounds[UnityEngine.Random.Range(0, walkSounds.Count)];
-                walkSound.Play();
+            walkSound = walkSounds[UnityEngine.Random.Range(0, walkSounds.Count)];
+            walkSound.Play();
         }
     }
 
@@ -72,4 +72,34 @@ public class Soldier : Combatent
             walkSound.Stop();
         enemiesList.Add(e);
     }
+
+    protected override void Death()
+    {
+        TroopsTracker.OnTroopDied(data.myType);
+
+        PlayDeathSounds();
+
+        if(animator!=null)
+            animator.SetTrigger("Died");        
+        
+        Collider2D collider = GetComponent<Collider2D>();
+        enabled = false;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        if(sr != null){
+            sr.sortingOrder = 0;
+        }
+
+        if(collider != null){
+            collider.enabled = false;
+        }
+        
+        AIPath aiPath = GetComponent<AIPath>();
+
+        if(aiPath != null){
+            aiPath.enabled = false;
+        }
+    }
+
 }

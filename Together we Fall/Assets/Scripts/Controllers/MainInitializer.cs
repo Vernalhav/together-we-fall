@@ -5,6 +5,8 @@ using UnityEngine;
 public class MainInitializer : MonoBehaviour
 {
     [SerializeField] private MainGameContent mainGameContent;
+    private Deck playerDeck;
+
     void Awake()
     {
         SceneTracker.sceneArgs = new Queue<SceneArgs>();

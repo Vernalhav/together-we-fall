@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FourthScene
   m_EditorClassIdentifier: 
   story: "Pazzio\u2019s secret services sent a message to the platoon that was closest
-    to Irene\u2019s suspected hideout -- a research lab in the middle of the woods
+    to Irene\u2019s suspected hideout: a research lab in the middle of the woods
     in Svorov. Pazzio needs her back urgently. "
   opt1: 
   opt2: 

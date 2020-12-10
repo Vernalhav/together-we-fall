@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
   m_Name: ThirdScene
   m_EditorClassIdentifier: 
-  story: A young woman from Pazzio, Irene, seems to be immune to the scourge of PS-20.
-    She was kidnapped by Svorov.
+  story: "A young woman from Pazzio, Irene, seems to be immune to the scourge of
+    PS\u201120. She has been kidnapped by Svorov."
   opt1: 
   opt2: 
   answers: []
