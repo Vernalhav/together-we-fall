@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: Enemy
   m_EditorClassIdentifier: 
   myType: 3
-  health: 100
   maxLife: 120
-  attackRadius: 6
+  attackRadius: 7
   projectileSpeed: 1.5
   fireRate: 1
   damage: 20
-  sr: {fileID: 0}
+  moveSpeed: 0
   enemiesTags: 00000000010000000200000004000000
   bulletPrefab: {fileID: 4183080524929918656, guid: 409b8418f88b60f43a13585b94e82740,
     type: 3}

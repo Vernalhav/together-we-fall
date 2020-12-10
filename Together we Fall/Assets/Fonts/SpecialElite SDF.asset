@@ -1447,6 +1447,10 @@ MonoBehaviour:
     m_Unicode: 88
     m_GlyphIndex: 35
     m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 8209
+    m_GlyphIndex: 84
+    m_Scale: 1
   m_AtlasTextures:
   - {fileID: 3765697966426545076}
   m_AtlasTextureIndex: 0

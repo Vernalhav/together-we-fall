@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainInitializer : MonoBehaviour
 {
     [SerializeField] private MainGameContent mainGameContent;
+
     [SerializeField] private Deck deck;
     //runner soldier tank irene
     [SerializeField] private List<int> cardCounts;

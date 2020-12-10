@@ -129,7 +129,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
 --- !u!114 &3160554361650699603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCombatent: {fileID: 3160554362114106958}
-  enemiesTags: 00000000
+  enemiesTags: 00000000010000000200000004000000
 --- !u!1 &3160554362114106959
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   deathSounds: []
   shootSounds:
   - {fileID: 1811389997126858140}
+  animator: {fileID: 0}
   data: {fileID: 11400000, guid: 135cc8649b854134a8a90f4cd6c034a6, type: 2}
   bulletPrefab: {fileID: 0}
   layerToAttack:

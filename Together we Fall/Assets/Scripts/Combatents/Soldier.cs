@@ -14,9 +14,9 @@ public class Soldier : Combatent
     private AudioSource walkSound;
     
     private float time = 0;
-       
-    void Start()
-    {
+    
+    [ContextMenu("Refresh prefab")]
+    private void Awake() {
         range = GetComponentInChildren<Range>();
         health = data.maxLife;
         maxHealth = data.maxLife;
@@ -29,6 +29,10 @@ public class Soldier : Combatent
         GetComponent<AIPath>().maxSpeed = data.moveSpeed + UnityEngine.Random.Range(-0.2f, 0.2f);
 
         range.GetComponent<CircleCollider2D>().radius = attackRadius;
+    }
+
+    void Start()
+    {
         GetComponent<AIDestinationSetter>().target = GameObject.Find("Destination").transform;
         PlayRandomWalk();
         animator = GetComponent<Animator>();
@@ -38,8 +42,8 @@ public class Soldier : Combatent
     private void PlayRandomWalk()
     {
         if(walkSounds.Count > 0){
-                walkSound = walkSounds[UnityEngine.Random.Range(0, walkSounds.Count)];
-                walkSound.Play();
+            walkSound = walkSounds[UnityEngine.Random.Range(0, walkSounds.Count)];
+            walkSound.Play();
         }
     }
 
@@ -72,4 +76,34 @@ public class Soldier : Combatent
             walkSound.Stop();
         enemiesList.Add(e);
     }
+
+    protected override void Death()
+    {
+        TroopsTracker.OnTroopDied(data.myType);
+
+        PlayDeathSounds();
+
+        if(animator!=null)
+            animator.SetTrigger("Died");        
+        
+        Collider2D collider = GetComponent<Collider2D>();
+        enabled = false;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+        if(sr != null){
+            sr.sortingOrder = 0;
+        }
+
+        if(collider != null){
+            collider.enabled = false;
+        }
+        
+        AIPath aiPath = GetComponent<AIPath>();
+
+        if(aiPath != null){
+            aiPath.enabled = false;
+        }
+    }
+
 }
