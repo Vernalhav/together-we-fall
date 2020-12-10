@@ -129,7 +129,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 2.5
 --- !u!114 &3160554361650699603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   layerToAttack:
     serializedVersion: 2
     m_Bits: 2048
-  explosionRadius: 3
+  explosionRadius: 6
   myAnimator: {fileID: 0}
   mySr: {fileID: 392813900451192336}
 --- !u!212 &2031876616
