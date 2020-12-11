@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Runner
   m_EditorClassIdentifier: 
   myType: 2
-  maxLife: 50
-  attackRadius: 8
+  maxLife: 100
+  attackRadius: 10
   projectileSpeed: 1
   fireRate: 1
-  damage: 50
-  moveSpeed: 2
+  damage: 100
+  moveSpeed: 2.5
   enemiesTags: 03000000
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
     type: 3}

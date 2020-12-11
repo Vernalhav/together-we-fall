@@ -36,7 +36,7 @@ MonoBehaviour:
     speakerSprite: {fileID: 5092895136280177615, guid: 847ed7ea16fb5da4ca4e5501fd237da8,
       type: 3}
     backgroundImage: {fileID: 21300000, guid: c8167d0d02fc32c428eab04274396a24, type: 3}
-    imageEffect: {fileID: 21300000, guid: 3fe38126c39b0d04a98ead910b0b6aef, type: 3}
+    imageEffect: {fileID: 0}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: 151029db0464ce24787ea4d89eb7aadc, type: 2}
     fadeOutText: A few days later...
@@ -44,8 +44,8 @@ MonoBehaviour:
   - speakerName: Irene
     speakerSprite: {fileID: -1265705340174883840, guid: 5f78797bc14910c4ea71062e25d54533,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: 3e203c395a327c142927964d24406c29, type: 2}
     fadeOutText: 
@@ -53,8 +53,8 @@ MonoBehaviour:
   - speakerName: Dante
     speakerSprite: {fileID: -7960608948029356370, guid: d04d06990c3b1a9418cfd3c6d4a41675,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: c60f68adbb9490c40abf9ae466b889c9, type: 2}
     fadeOutText: 
@@ -62,8 +62,8 @@ MonoBehaviour:
   - speakerName: Samantha
     speakerSprite: {fileID: -94144387904828994, guid: 50ef772cae0bd9343912d4d69f2da7a5,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: 4f8d37733ff19de48979854950671a34, type: 2}
     fadeOutText: 
@@ -71,8 +71,8 @@ MonoBehaviour:
   - speakerName: Dante
     speakerSprite: {fileID: -7960608948029356370, guid: d04d06990c3b1a9418cfd3c6d4a41675,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: 230c0b40c0775d245a6ff1d02a70c30b, type: 2}
     fadeOutText: 
@@ -80,8 +80,8 @@ MonoBehaviour:
   - speakerName: Irene
     speakerSprite: {fileID: -1265705340174883840, guid: 5f78797bc14910c4ea71062e25d54533,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: 6631e7b8fdce8b34cac7a2567e907b89, type: 2}
     fadeOutText: 
@@ -89,8 +89,8 @@ MonoBehaviour:
   - speakerName: Samantha
     speakerSprite: {fileID: -94144387904828994, guid: 50ef772cae0bd9343912d4d69f2da7a5,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: b85f5d4b48b5deb4d9f2e17835f48973, type: 2}
     fadeOutText: 
@@ -98,8 +98,8 @@ MonoBehaviour:
   - speakerName: Dante
     speakerSprite: {fileID: -7960608948029356370, guid: d04d06990c3b1a9418cfd3c6d4a41675,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: 802da9f001aa3a44f82240ddf5760112, type: 2}
     fadeOutText: 
@@ -107,8 +107,8 @@ MonoBehaviour:
   - speakerName: Samantha
     speakerSprite: {fileID: -94144387904828994, guid: 50ef772cae0bd9343912d4d69f2da7a5,
       type: 3}
-    backgroundImage: {fileID: 21300000, guid: 0a61281d81325264ca2ed2748073e87b, type: 3}
-    imageEffect: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 1a2690d486daa1b4ea03da4affe11b66, type: 3}
+    imageEffect: {fileID: 21300000, guid: 58fe5c6915fe038449072c7649e550f6, type: 3}
     setShadow: 0
     dialogue: {fileID: 11400000, guid: abfda63358993cf46af2e34e62706987, type: 2}
     fadeOutText: 
