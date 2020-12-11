@@ -108,7 +108,7 @@ public class TroopsTracker : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("Tentou decrementar quando não deveria.");
+                Debug.LogWarning($"Tentou decrementar {c} quando não deveria.");
             }
         }
 

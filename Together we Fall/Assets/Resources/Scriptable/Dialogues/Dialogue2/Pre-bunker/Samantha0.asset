@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Samantha0
+  m_EditorClassIdentifier: 
+  story: "Chief! I have some information! We\u2019re 40 kilometers away from Bunker
+    51. It was built by our government to protect and give shelter to soldiers in
+    war.\r\nWe might be able to find supplies and maybe even find some soldiers that
+    are sheltering from Svorov\u2019s invasion.\r"
+  opt1: Great! It is about time that we restock our supplies.
+  opt2: We have no time! Winter is coming and we must reach the capital!
+  answers:
+  - {fileID: 11400000, guid: 3bafce06274a9d0498cbd6ee74fe28c0, type: 2}
+  - {fileID: 11400000, guid: 5c0c53f3a6eda5c41bbdb4e338505884, type: 2}

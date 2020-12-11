@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Samantha2
+  m_EditorClassIdentifier: 
+  story: "Bruno... I don\u2019t think Dante is feeling well. He has always been strong.
+    He has Leo\u2019s blood on his hands and he\u2019s raving on about his family!
+    He\u2019s delirious!!"
+  opt1: 
+  opt2: 
+  answers: []
