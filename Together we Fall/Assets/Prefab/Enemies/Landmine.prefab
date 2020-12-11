@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 3160554362114106959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 6.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3160554361650699601}
   - {fileID: 3160554360412431393}
@@ -195,13 +195,12 @@ MonoBehaviour:
   deathSounds: []
   shootSounds:
   - {fileID: 1811389997126858140}
-  animator: {fileID: 0}
   data: {fileID: 11400000, guid: 135cc8649b854134a8a90f4cd6c034a6, type: 2}
   bulletPrefab: {fileID: 0}
   layerToAttack:
     serializedVersion: 2
     m_Bits: 2048
-  explosionRadius: 3
+  explosionRadius: 2
   myAnimator: {fileID: 0}
   mySr: {fileID: 392813900451192336}
 --- !u!212 &2031876616
@@ -240,8 +239,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1635566617
+  m_SortingLayer: 1
   m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

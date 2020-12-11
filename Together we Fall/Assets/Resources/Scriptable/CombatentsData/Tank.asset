@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myType: 1
   maxLife: 600
-  attackRadius: 10
+  attackRadius: 8
   projectileSpeed: 4
   fireRate: 4
   damage: 20

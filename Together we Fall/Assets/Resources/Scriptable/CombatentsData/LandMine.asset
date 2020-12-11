@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myType: 3
   maxLife: 10
-  attackRadius: 2.5
+  attackRadius: 1
   projectileSpeed: 0
   fireRate: 0
-  damage: 60
+  damage: 200
   moveSpeed: 0
   enemiesTags: 00000000010000000200000004000000
   bulletPrefab: {fileID: 0}
