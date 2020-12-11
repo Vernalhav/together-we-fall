@@ -155,8 +155,13 @@ public class DialogueController : MonoBehaviour, IPointerClickHandler
 
         if (SceneTracker.sceneArgs.Count == 0) {
             Debug.Log("Acabou o jogo!");
+
+            if (conversation.dialogues[currentDialogueIndex - 1].fadeOutSound != null)
+                motifAudioSource.PlayOneShot(conversation.dialogues[currentDialogueIndex - 1].fadeOutSound);
+
             fader.TransitionToScene(SceneIndexes.MainMenu, message: message);
-        } else {
+        }
+        else {
             if (SceneTracker.sceneArgs.Peek() is CombatArgs)
                 fader.TransitionToScene(SceneIndexes.CombatScene, message: message);
             else if (SceneTracker.sceneArgs.Peek() is DialogueArgs)

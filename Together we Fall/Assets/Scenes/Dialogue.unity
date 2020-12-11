@@ -1415,7 +1415,7 @@ MonoBehaviour:
   motifAudioSource: {fileID: 1417899360}
   typeAudio: {fileID: 8300000, guid: 1cf443737a6232e4fad8d051a84735f1, type: 3}
   pauseController: {fileID: 486463686}
-  defaultConversation: {fileID: 11400000, guid: 1faa3e0655f569a4ea62520eb45b71c4,
+  defaultConversation: {fileID: 11400000, guid: 59cb66336c8259241a8c65ae02944d2c,
     type: 2}
 --- !u!1 &1193584399
 GameObject:

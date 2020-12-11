@@ -13,4 +13,44 @@ MonoBehaviour:
   m_Name: EndingConversation
   m_EditorClassIdentifier: 
   initialMessage: 
-  dialogues: []
+  dialogues:
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: fc4c990c754ffbe48b39b1ce364c1e0f, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: 2c24ebca3c13f8546b7684ab9debcb24, type: 2}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: e543e981cc22347489be44409961233e, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: 9e700d3ad314ffb4993944cd468e189d, type: 2}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 39cfea6c3e006ed429bf591c4ade2be5, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: 57e57abbd906e9b4abe3d6eb163fa62b, type: 2}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: bf2e9637da1083b448ef4148e70413d5, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: e02f5603d86c5f04f875f9c032bead9b, type: 2}
+    fadeOutText: 
+    fadeOutSound: {fileID: 0}
+  - speakerName: 
+    speakerSprite: {fileID: 0}
+    backgroundImage: {fileID: 21300000, guid: 70bb26bae89aca24eadf15d09e26c35f, type: 3}
+    imageEffect: {fileID: 0}
+    setShadow: 0
+    dialogue: {fileID: 11400000, guid: 5efd65d56adc35e43bc8b41f6e0d094d, type: 2}
+    fadeOutText: Thank you for playing!
+    fadeOutSound: {fileID: 8300000, guid: d9c2b1edff5e0e04da97125d22f8e940, type: 3}
