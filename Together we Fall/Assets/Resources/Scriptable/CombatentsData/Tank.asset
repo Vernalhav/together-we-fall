@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Tank
   m_EditorClassIdentifier: 
   myType: 1
-  maxLife: 300
+  maxLife: 600
   attackRadius: 10
   projectileSpeed: 4
   fireRate: 4
-  damage: 40
+  damage: 20
   moveSpeed: 1
   enemiesTags: 03000000
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,

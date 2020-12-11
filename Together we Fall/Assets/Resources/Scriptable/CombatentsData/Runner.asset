@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Runner
   m_EditorClassIdentifier: 
   myType: 2
-  maxLife: 60
+  maxLife: 100
   attackRadius: 10
   projectileSpeed: 1
   fireRate: 1

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Enemy
   m_EditorClassIdentifier: 
   myType: 3
-  maxLife: 300
-  attackRadius: 2.5
+  maxLife: 1200
+  attackRadius: 5
   projectileSpeed: 1.5
-  fireRate: 3
+  fireRate: 2
   damage: 60
   moveSpeed: 0
   enemiesTags: 00000000010000000200000004000000
