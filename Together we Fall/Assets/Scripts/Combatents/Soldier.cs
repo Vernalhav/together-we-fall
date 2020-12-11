@@ -38,7 +38,7 @@ public class Soldier : Combatent
         animator = GetComponent<Animator>();
         if (animator == null)
             Debug.LogWarning("Animator is null!");
-        animator.SetBool("Moving", true);
+        animator?.SetBool("Moving", true);
     }
 
     private void PlayRandomWalk()
@@ -73,7 +73,8 @@ public class Soldier : Combatent
     public override void FoundEnemy(Combatent e)
     {
         myPath.enabled = false;
-        animator.SetBool("Moving", false);
+        if(animator != null)
+            animator.SetBool("Moving", false);
         if(walkSound != null)
             walkSound.Stop();
         enemiesList.Add(e);

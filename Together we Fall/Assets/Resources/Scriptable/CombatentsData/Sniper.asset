@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Sniper
   m_EditorClassIdentifier: 
   myType: 3
-  maxLife: 100
-  attackRadius: 30
+  maxLife: 60
+  attackRadius: 25
   projectileSpeed: 1000000
   fireRate: 0.5
-  damage: 50
+  damage: 80
   moveSpeed: 0
   enemiesTags: 00000000010000000200000004000000
   bulletPrefab: {fileID: 0}

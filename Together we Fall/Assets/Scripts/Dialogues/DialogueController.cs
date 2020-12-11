@@ -73,7 +73,7 @@ public class DialogueController : MonoBehaviour, IPointerClickHandler
     private ConversationData defaultConversation;
 
     private bool dialogueFinished = false;
-
+    private bool isChangingScene;
 
     void Start()
     {
@@ -82,6 +82,8 @@ public class DialogueController : MonoBehaviour, IPointerClickHandler
 
     void Awake()
     {
+        isChangingScene = false;
+
         if (SceneTracker.sceneArgs.Count > 0 && SceneTracker.sceneArgs.Peek() is DialogueArgs){
             DialogueArgs currentConversationArgs = SceneTracker.sceneArgs.Peek() as DialogueArgs;
             conversation = currentConversationArgs.currentConversation;
@@ -148,10 +150,11 @@ public class DialogueController : MonoBehaviour, IPointerClickHandler
 
     private void ChangeScene(string message)
     {
+        
+        dialogueFinished = true;
+
         if (SceneTracker.sceneArgs.Count > 0)
             SceneTracker.sceneArgs.Dequeue();
-
-        dialogueFinished = true;
 
         if (SceneTracker.sceneArgs.Count == 0) {
             Debug.Log("Acabou o jogo!");
@@ -167,6 +170,7 @@ public class DialogueController : MonoBehaviour, IPointerClickHandler
     private void SetupNextDialogue()
     {
         if (currentDialogueIndex >= conversation.dialogues.Length){
+
             ChangeScene(conversation.dialogues[currentDialogueIndex - 1].fadeOutText);
             return;
         }
@@ -300,7 +304,7 @@ public class DialogueController : MonoBehaviour, IPointerClickHandler
         if (dialogueFinished)
             return;
 
-        if (!isFading && !pauseController.isPaused){
+        if (!isFading && !pauseController.isPaused && !isChangingScene){
 
             if (isTyping){
                 SkipTypingAnimation();

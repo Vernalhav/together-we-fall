@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Soldier
   m_EditorClassIdentifier: 
   myType: 0
-  maxLife: 100
+  maxLife: 180
   attackRadius: 15
   projectileSpeed: 2
-  fireRate: 1.5
-  damage: 5
-  moveSpeed: 1.4
+  fireRate: 3
+  damage: 60
+  moveSpeed: 1.5
   enemiesTags: 03000000
   bulletPrefab: {fileID: 8617469612680192512, guid: 2366c47f57b7e984e8f0130864c56aeb,
     type: 3}
