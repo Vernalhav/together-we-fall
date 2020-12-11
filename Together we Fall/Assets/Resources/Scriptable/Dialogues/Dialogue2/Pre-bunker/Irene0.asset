@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Irene0
+  m_EditorClassIdentifier: 
+  story: "I didn\u2019t imagine that I\u2019d ever be so happy to see my home country
+    again. These lands are so familiar to me that I might be getting a little emotional.\r\nI
+    couldn\u2019t stop remembering the time that everything was ok... I was in my
+    kitchen, having dinner with my husband. The time that I was in front of my canvas
+    almost every day, looking at beautiful nature... The trees, birds, blue skies...
+    Now everything is looking grim, destroyed and dead.\r"
+  opt1: 
+  opt2: 
+  answers: []

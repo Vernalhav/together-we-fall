@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Dante0
+  m_EditorClassIdentifier: 
+  story: "...My God, I can\u2019t believe it!\r\nChief! The bunker has been invaded!
+    Svorovian soldiers have found this hideout, taken most of the supplies and equipment...
+    Our colleagues have been murdered, Chief! Their bodies are inside... It seems
+    like the Svorovians left the bunker a few days ago.\r"
+  opt1: Aaagh, damn it... How could this happen!?
+  opt2: Do we still have supplies?! We must be prepared before reaching the capital!
+  answers:
+  - {fileID: 11400000, guid: f31d27b3e924e9b469657c326ceec9ed, type: 2}
+  - {fileID: 11400000, guid: 5b51bf12b42825a4b9bdb3d66442c949, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
+  m_Name: Bruno2
+  m_EditorClassIdentifier: 
+  story: There is another matter at hand, Chief! Dante cannot go with us any longer.
+    We can leave him in the bunker... the disease will take care of the rest...
+  opt1: We should end his suffering... Dante! I love you, brother!
+  opt2: "I can\u2019t believe it! I can\u2019t see him die like this!"
+  answers:
+  - {fileID: 11400000, guid: 1790c3bf11a2a564c9e20eef7d692aa5, type: 2}
+  - {fileID: 11400000, guid: d6efe7240cddbf14c82afc569292fb7d, type: 2}

@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9e35d01a4a88ed43bf8cedd9502d952, type: 3}
-  m_Name: Dante2_0
+  m_Name: Dante2_1
   m_EditorClassIdentifier: 
-  story: "Good idea, Chief. I\u2019ll look for any explosives that we can use to
-    draw some of them away."
+  story: "Good idea! We\u2019ll wait for a few more hours and strike when the time
+    is right.\r"
   opt1: 
   opt2: 
-  answers:
-  - {fileID: 11400000, guid: abfda63358993cf46af2e34e62706987, type: 2}
+  answers: []
